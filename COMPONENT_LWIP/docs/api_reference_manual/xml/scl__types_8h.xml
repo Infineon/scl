@@ -1,0 +1,2497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="scl__types_8h" kind="file" language="C++">
+    <compoundname>scl_types.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">cy_result.h</includes>
+    <includes refid="scl__common_8h" local="yes">scl_common.h</includes>
+    <includedby refid="scl__buffer__api_8h" local="yes">scl_buffer_api.h</includedby>
+    <includedby refid="scl__wifi__api_8h" local="yes">scl_wifi_api.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>scl_types.h</label>
+        <link refid="scl__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cy_result.h</label>
+      </node>
+      <node id="4">
+        <label>scl_common.h</label>
+        <link refid="scl__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>scl_wifi_api.h</label>
+        <link refid="scl__wifi__api_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>scl_ipc.h</label>
+        <link refid="scl__ipc_8h"/>
+      </node>
+      <node id="1">
+        <label>scl_types.h</label>
+        <link refid="scl__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scl_buffer_api.h</label>
+        <link refid="scl__buffer__api_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structscl__listen__interval__t" prot="public">scl_listen_interval_t</innerclass>
+    <innerclass refid="structscl__ssid__t" prot="public">scl_ssid_t</innerclass>
+    <innerclass refid="structscl__scan__extended__params__t" prot="public">scl_scan_extended_params_t</innerclass>
+    <innerclass refid="structscl__scan__result__t" prot="public">scl_scan_result_t</innerclass>
+    <innerclass refid="structscl__sync__scan__result__t" prot="public">scl_sync_scan_result_t</innerclass>
+    <innerclass refid="structscl__wl__bss__info__t" prot="public">scl_wl_bss_info_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="scl__types_8h_1a9ee2fe056ad3787e30bb8da7248592c7" prot="public" static="no">
+        <name>SSID_NAME_SIZE</name>
+        <initializer>(33)</initializer>
+        <briefdescription>
+<para>SSID Length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="36" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a4199a1b37dba92f482ff0b9eb406c323" prot="public" static="no">
+        <name>WEP_ENABLED</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+<para>Flag to enable WEP Security <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="38" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" prot="public" static="no">
+        <name>TKIP_ENABLED</name>
+        <initializer>0x0002</initializer>
+        <briefdescription>
+<para>Flag to enable TKIP Encryption <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="39" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" prot="public" static="no">
+        <name>AES_ENABLED</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+<para>Flag to enable AES Encryption <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="40" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a4d4a4586c264fe8e4acb0bf7169b7b0f" prot="public" static="no">
+        <name>SHARED_ENABLED</name>
+        <initializer>0x00008000</initializer>
+        <briefdescription>
+<para>Flag to enable Shared key Security. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="41" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" prot="public" static="no">
+        <name>WPA_SECURITY</name>
+        <initializer>0x00200000</initializer>
+        <briefdescription>
+<para>Flag to enable WPA Security <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="42" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" prot="public" static="no">
+        <name>WPA2_SECURITY</name>
+        <initializer>0x00400000</initializer>
+        <briefdescription>
+<para>Flag to enable WPA2 Security <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="43" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1ad175824d1581f69f5a725e4c9171aa79" prot="public" static="no">
+        <name>WPA3_SECURITY</name>
+        <initializer>0x01000000</initializer>
+        <briefdescription>
+<para>Flag to enable WPA3 PSK Security <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="44" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" prot="public" static="no">
+        <name>ENTERPRISE_ENABLED</name>
+        <initializer>0x02000000</initializer>
+        <briefdescription>
+<para>Flag to enable Enterprise Security. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="46" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1aaae7e8a0eb357cae8f130f9099d8e7b8" prot="public" static="no">
+        <name>WPS_ENABLED</name>
+        <initializer>0x10000000</initializer>
+        <briefdescription>
+<para>Flag to enable WPS Security <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="47" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a9640c064932a3a633a3312b737658f83" prot="public" static="no">
+        <name>IBSS_ENABLED</name>
+        <initializer>0x20000000</initializer>
+        <briefdescription>
+<para>Flag to enable IBSS mode <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="48" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1aafdddf85f4d0df08ee3aead815ad7c76" prot="public" static="no">
+        <name>FBT_ENABLED</name>
+        <initializer>0x40000000</initializer>
+        <briefdescription>
+<para>Flag to enable FBT <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="49" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a287bbd4f521f0d1cf44165bc617cebf5" prot="public" static="no">
+        <name>NO_POWERSAVE_MODE</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>No Power save mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="51" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a32f56429462855603066fea3723c5217" prot="public" static="no">
+        <name>PM1_POWERSAVE_MODE</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>Power save mode on specified interface without regard for throughput reduction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="52" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1af29e5543837b68c29417a7d15e3228b7" prot="public" static="no">
+        <name>PM2_POWERSAVE_MODE</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Power save mode on specified interface with High throughput. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="53" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1ae8ab4c5be1ff00ab7458f36cd1b67c71" prot="public" static="no">
+        <name>SCL_MAX_EVENT_SUBSCRIPTION</name>
+        <initializer>(33)</initializer>
+        <briefdescription>
+<para>Maximum number of events registered at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="55" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a0e18e36fa66280ef0b6df15a818234ea" prot="public" static="no">
+        <name>SCL_EVENT_NOT_REGISTERED</name>
+        <initializer>(0xFF)</initializer>
+        <briefdescription>
+<para>Event not registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="57" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1af360cd56c533c5430e4a650933d5aca3" prot="public" static="no">
+        <name>SCL_EVENT_HANDLER_LIST_SIZE</name>
+        <initializer>(5)</initializer>
+        <briefdescription>
+<para>Maximum number of simultaneously registered event handlers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="59" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a3c95a90e7806e4b0d21edfae15b73465" prot="public" static="no">
+        <name>UNUSED_PARAMETER</name>
+        <param><defname>x</defname></param>
+        <initializer>( (void)(x) )</initializer>
+        <briefdescription>
+<para>Suppresses unused parameter warning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="64" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a4048bf3892868ded8a28f8cbdd339c09" prot="public" static="no">
+        <name>UNUSED_VARIABLE</name>
+        <param><defname>x</defname></param>
+        <initializer>( (void)(x) )</initializer>
+        <briefdescription>
+<para>Suppresses unused variable warning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="69" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1a1491cb4c4adc44f22a91f18609dfb2f7" prot="public" static="no">
+        <name>REFERENCE_DEBUG_ONLY_VARIABLE</name>
+        <param><defname>x</defname></param>
+        <initializer>( (void)(x) )</initializer>
+        <briefdescription>
+<para>Suppresses unused variable warning that occurs due to an assert being disabled in release mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="74" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__types_8h_1aa44a8901a98f9868efefee50db967736" prot="public" static="no">
+        <name>MCSSET_LEN</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para>Maximum allowed mcs rate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="233" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_security_t</name>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a86f904c2b846eef773b9200212046dcd" prot="public">
+          <name>SCL_SECURITY_OPEN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Open security <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ad48007b9e1fe1972d5c4070642d7f26b" prot="public">
+          <name>SCL_SECURITY_WEP_PSK</name>
+          <initializer>= WEP_ENABLED</initializer>
+          <briefdescription>
+<para>WEP PSK Security with open authentication <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ab7c67fff083e10fe48d11c29558b1d39" prot="public">
+          <name>SCL_SECURITY_WEP_SHARED</name>
+          <initializer>= (WEP_ENABLED | SHARED_ENABLED)</initializer>
+          <briefdescription>
+<para>WEP PSK Security with shared authentication <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae98e5d51446406bd53805807f40c70b8" prot="public">
+          <name>SCL_SECURITY_WPA_TKIP_PSK</name>
+          <initializer>= (WPA_SECURITY | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA PSK Security with TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a29a27e98cf3c95da855b5577825d270e" prot="public">
+          <name>SCL_SECURITY_WPA_AES_PSK</name>
+          <initializer>= (WPA_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA PSK Security with AES <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a328af64a5bfe6959a75d150bb500f4fe" prot="public">
+          <name>SCL_SECURITY_WPA_MIXED_PSK</name>
+          <initializer>= (WPA_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA PSK Security with AES &amp; TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa88617f6384eea8a0f7a6abe0f84ec81" prot="public">
+          <name>SCL_SECURITY_WPA2_AES_PSK</name>
+          <initializer>= (WPA2_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 PSK Security with AES <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae1efdd5c152b318166d6f6560393261e" prot="public">
+          <name>SCL_SECURITY_WPA2_TKIP_PSK</name>
+          <initializer>= (WPA2_SECURITY | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 PSK Security with TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae28655d240b846e6cfd00676704d322d" prot="public">
+          <name>SCL_SECURITY_WPA2_MIXED_PSK</name>
+          <initializer>= (WPA2_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 PSK Security with AES &amp; TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a5663ce3870a19a2d01c816e54417f2ba" prot="public">
+          <name>SCL_SECURITY_WPA2_FBT_PSK</name>
+          <initializer>= (WPA2_SECURITY | AES_ENABLED | FBT_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 FBT PSK Security with AES &amp; TKIP. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a23e95b5998fa405fecd423e416cff179" prot="public">
+          <name>SCL_SECURITY_WPA3_SAE</name>
+          <initializer>= (WPA3_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA3 Security with AES. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a6846340f2b57b8e1406cb5952d4d1aec" prot="public">
+          <name>SCL_SECURITY_WPA2_WPA_AES_PSK</name>
+          <initializer>= (WPA2_SECURITY | WPA_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 WPA PSK Security with AES <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a2c145ac8272198c2dd3ad9949674a4c6" prot="public">
+          <name>SCL_SECURITY_WPA2_WPA_MIXED_PSK</name>
+          <initializer>= (WPA2_SECURITY | WPA_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 WPA PSK Security with AES &amp; TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a5d9d2fe7c0130877be4e2f8d1d7f2311" prot="public">
+          <name>SCL_SECURITY_WPA3_WPA2_PSK</name>
+          <initializer>= (WPA3_SECURITY | WPA2_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA3 WPA2 PSK Security with AES. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ac9cb906c3b88a9bdc0ade00651f0c771" prot="public">
+          <name>SCL_SECURITY_WPA2_WPA_PSK</name>
+          <initializer>= (WPA2_SECURITY | WPA_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 WPA PSK Security with AES. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a170cf7999b9e915c45d945e72e6ef087" prot="public">
+          <name>SCL_SECURITY_WPA2_WPA_TKIP_PSK</name>
+          <initializer>= (WPA2_SECURITY | WPA_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 WPA PSK Security with AES. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a644c609edc87ebba035f2de49ac62f1a" prot="public">
+          <name>SCL_SECURITY_WPA_TKIP_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA_SECURITY | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA Enterprise Security with TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67acee17758cf43103a3a3b8736f7ffa032" prot="public">
+          <name>SCL_SECURITY_WPA_AES_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA Enterprise Security with AES <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa8e4e60ef3977f23abae498e391dcb81" prot="public">
+          <name>SCL_SECURITY_WPA_MIXED_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA Enterprise Security with AES &amp; TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67adccfe4e43b721376adeb3a5bac94a714" prot="public">
+          <name>SCL_SECURITY_WPA2_TKIP_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA2_SECURITY | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 Enterprise Security with TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67af5c5e8ba6b8c3de871d3c989b2691a4e" prot="public">
+          <name>SCL_SECURITY_WPA2_AES_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA2_SECURITY | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 Enterprise Security with AES <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa23b01657d269dadc56692a9655ca69b" prot="public">
+          <name>SCL_SECURITY_WPA2_MIXED_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA2_SECURITY | AES_ENABLED | TKIP_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 Enterprise Security with AES &amp; TKIP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a0e83dca81b6fe104e6f9cf45a07bac80" prot="public">
+          <name>SCL_SECURITY_WPA2_FBT_ENT</name>
+          <initializer>= (ENTERPRISE_ENABLED | WPA2_SECURITY | AES_ENABLED | FBT_ENABLED)</initializer>
+          <briefdescription>
+<para>WPA2 Enterprise Security with AES &amp; FBT <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ad886638286e66e06c8e3fa714146c9a0" prot="public">
+          <name>SCL_SECURITY_IBSS_OPEN</name>
+          <initializer>= (IBSS_ENABLED)</initializer>
+          <briefdescription>
+<para>Open security on IBSS ad-hoc network <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a42bca33cf42db8341589161fc90a08ac" prot="public">
+          <name>SCL_SECURITY_WPS_OPEN</name>
+          <initializer>= (WPS_ENABLED)</initializer>
+          <briefdescription>
+<para>WPS with open security <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ac25ebb997080ba93473a3171bb168393" prot="public">
+          <name>SCL_SECURITY_WPS_SECURE</name>
+          <initializer>= (WPS_ENABLED | AES_ENABLED)</initializer>
+          <briefdescription>
+<para>WPS with AES security <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a8bda7dcf292a27fe457096fbabeb59eb" prot="public">
+          <name>SCL_SECURITY_UNKNOWN</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>Returned by scan function if security is unknown. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Do not pass this to the join function! </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a35af276654937141437e8c912966ac73" prot="public">
+          <name>SCL_SECURITY_FORCE_32_BIT</name>
+          <initializer>= 0x7fffffff</initializer>
+          <briefdescription>
+<para>Exists only to force scl_security_t type to 32 bits. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of Wi-Fi security modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="84" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="84" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_802_11_band_t</name>
+        <enumvalue id="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64dae5d47ffbe5bfd0a406b4f44d9b6a9c6c" prot="public">
+          <name>SCL_802_11_BAND_5GHZ</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Denotes 5GHz radio band <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64da6d111a8b6f67923956f9129e9872cf0f" prot="public">
+          <name>SCL_802_11_BAND_2_4GHZ</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Denotes 2.4GHz radio band. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of 802.11 radio bands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="126" column="1" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="125" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_scan_type_t</name>
+        <enumvalue id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea43c77a264c5a68ba7402d272d5818485" prot="public">
+          <name>SCL_SCAN_TYPE_ACTIVE</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+<para>Actively scan a network by sending 802.11 probe(s) <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea325ca62baea89d873496847dc2f6e086" prot="public">
+          <name>SCL_SCAN_TYPE_PASSIVE</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>Passively scan a network by listening for beacons from APs <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47eadbab2440a09df91733882418c643c607" prot="public">
+          <name>SCL_SCAN_TYPE_PNO</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>Use preferred network offload to detect an AP <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea9e84ff288b7e8c32359d5d6c1898804d" prot="public">
+          <name>SCL_SCAN_TYPE_PROHIBITED_CHANNELS</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+<para>Permit (passively) scanning a channel that isn&apos;t valid for the current country <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea522c7c1ae2ff3acd70bc336ec14bc50e" prot="public">
+          <name>SCL_SCAN_TYPE_NO_BSSID_FILTER</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+<para>Return a scan record for each beacon or probe response RX&apos;ed <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of methods of scanning. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="143" column="1" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="142" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_bss_type_t</name>
+        <enumvalue id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa7b039658e58a158ce54a1219e026fc91" prot="public">
+          <name>SCL_BSS_TYPE_INFRASTRUCTURE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Denotes infrastructure network <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fab969be0fc08cae910fcfb820d7663ed6" prot="public">
+          <name>SCL_BSS_TYPE_ADHOC</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Denotes an 802.11 ad-hoc IBSS network <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa4a800e68a8f050f9faff956ce591b82a" prot="public">
+          <name>SCL_BSS_TYPE_ANY</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Denotes either infrastructure or ad-hoc network. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa643a49227a45f193bdabbef53f114488" prot="public">
+          <name>SCL_BSS_TYPE_MESH</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Denotes 802.11 mesh network <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa13a1230cb01063bb97731ce9674bc775" prot="public">
+          <name>SCL_BSS_TYPE_UNKNOWN</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>May be returned by scan function if BSS type is unknown. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Do not pass this to the Join function </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of network types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="155" column="1" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="154" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_scan_status_t</name>
+        <enumvalue id="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1ba9d48c63c00486124e6bc25d8db1ec138" prot="public">
+          <name>SCL_SCAN_INCOMPLETE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Denotes that scan is not finished. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1bad39efc1c23ec7a0c7d67f568e6f52a85" prot="public">
+          <name>SCL_SCAN_COMPLETED_SUCCESSFULLY</name>
+          <briefdescription>
+<para>Successful completion of scan. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1bad4f3132ab91a0e896e7477b92dbd5075" prot="public">
+          <name>SCL_SCAN_ABORTED</name>
+          <briefdescription>
+<para>Scan is aborted. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Structure for storing scan status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="177" column="1" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_event_num_t</name>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4716a0da6184af49cae5e08111f166e6" prot="public">
+          <name>SCL_WLC_E_NONE</name>
+          <initializer>= 0x7FFFFFFE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4eecd783b6d50314dd7ef2fc5cfa7b4f" prot="public">
+          <name>SCL_WLC_E_SET_SSID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab968e66d664c3701aeddedd5ee241a60" prot="public">
+          <name>SCL_WLC_E_JOIN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ace7e6d0ceee0c85052feb38506182840" prot="public">
+          <name>SCL_WLC_E_START</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>differentiates join IBSS from found (SCL_WLC_E_START) IBSS </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aef6e7ee23ee2d1102e258b3efc8b4911" prot="public">
+          <name>SCL_WLC_E_AUTH</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>STA founded an IBSS or AP started a BSS. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a417311498fb730320c05e28a1cef934e" prot="public">
+          <name>SCL_WLC_E_AUTH_IND</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>802.11 AUTH request </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ae8cd2d04932d17b7a7e85aca950d8a8d" prot="public">
+          <name>SCL_WLC_E_DEAUTH</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>802.11 AUTH indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4e5c6d2919e4ff43550524c7670d8c1c" prot="public">
+          <name>SCL_WLC_E_DEAUTH_IND</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>802.11 DEAUTH request </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0d4e06953a012521548a2043f3952822" prot="public">
+          <name>SCL_WLC_E_ASSOC</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>802.11 DEAUTH indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3749fca75928318bc137bd3d13bee1b1" prot="public">
+          <name>SCL_WLC_E_ASSOC_IND</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>802.11 ASSOC request </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a30ce84d8f8f0a946c3234b50f846dd16" prot="public">
+          <name>SCL_WLC_E_REASSOC</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>802.11 ASSOC indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad6ca0c4ae62150d515d0fa85d469dbba" prot="public">
+          <name>SCL_WLC_E_REASSOC_IND</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>802.11 REASSOC request </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8b8ce2cd9bead148fdcd19a63a358f83" prot="public">
+          <name>SCL_WLC_E_DISASSOC</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>802.11 REASSOC indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a684e8c6a2f8ca3f94f4750c048dacb5e" prot="public">
+          <name>SCL_WLC_E_DISASSOC_IND</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>802.11 DISASSOC request </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6a2850bdbf8be6db42306b3b64c949e9" prot="public">
+          <name>SCL_WLC_E_QUIET_START</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para>802.11 DISASSOC indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afd9167ab090a85ac9b7d9fbea8a49739" prot="public">
+          <name>SCL_WLC_E_QUIET_END</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>802.11h Quiet period started </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5d13f5b213f3a9e25b63a6f08e108e04" prot="public">
+          <name>SCL_WLC_E_BEACON_RX</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>802.11h Quiet period ended </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe5c4901c57f49aee9b55ac1baa5addd" prot="public">
+          <name>SCL_WLC_E_LINK</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>BEACONS received/lost indication. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a73d69363a67b26826ed243ba6d1b7af7" prot="public">
+          <name>SCL_WLC_E_MIC_ERROR</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>generic link indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a144efea5d99370203773fa66aa6ce987" prot="public">
+          <name>SCL_WLC_E_NDIS_LINK</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>TKIP MIC error occurred. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3a7f08a090eea87c341930dc6ba0b722" prot="public">
+          <name>SCL_WLC_E_ROAM</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>NDIS style link indication. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac696332de7d07e5278f00a89cba0e1f1" prot="public">
+          <name>SCL_WLC_E_TXFAIL</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>roam attempt occurred: indicate status &amp; reason </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a97266d0748f152f580e3469433927f52" prot="public">
+          <name>SCL_WLC_E_PMKID_CACHE</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>change in dot11FailedCount (txfail) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afcd85e73b7daa4e0598503423b59287c" prot="public">
+          <name>SCL_WLC_E_RETROGRADE_TSF</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para>WPA2 pmkid cache indication. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa06e0c5a453aaf4c2ba0902529302fda" prot="public">
+          <name>SCL_WLC_E_PRUNE</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para>current AP&apos;s TSF value went backward </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab7b8c85ab7152fffd3bd2f596c1801f4" prot="public">
+          <name>SCL_WLC_E_AUTOAUTH</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para>AP was pruned from join list for reason. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a26bbe02c4460f841333e0f90efee2d3e" prot="public">
+          <name>SCL_WLC_E_EAPOL_MSG</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para>report AutoAuth table entry match for join attempt </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe3f315623da56dc00dc5e6ea0ad61e5" prot="public">
+          <name>SCL_WLC_E_SCAN_COMPLETE</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para>Event encapsulating an EAPOL message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a03c7dbe1f13ab0b2a5ef7b59b3f06a3b" prot="public">
+          <name>SCL_WLC_E_ADDTS_IND</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para>Scan results are ready or scan was aborted. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a433faaa62b8ad0110794c843ea278967" prot="public">
+          <name>SCL_WLC_E_DELTS_IND</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+<para>indicate to host addts fail/success </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6a4d5833cd73ae61ed1eda393dae3d66" prot="public">
+          <name>SCL_WLC_E_BCNSENT_IND</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+<para>indicate to host delts fail/success </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad9a5d2e122434d2922003816e89f1f42" prot="public">
+          <name>SCL_WLC_E_BCNRX_MSG</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>indicate to host of beacon transmit </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ad36cb4f1feee3a99e5a9cbf4e2db83" prot="public">
+          <name>SCL_WLC_E_BCNLOST_MSG</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+<para>Send the received beacon up to the host. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a98c053877371849ea153963f954fdeb0" prot="public">
+          <name>SCL_WLC_E_ROAM_PREP</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para>indicate to host loss of beacon </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1820d1e21347758e990d28fc91076185" prot="public">
+          <name>SCL_WLC_E_PFN_NET_FOUND</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para>before attempting to roam </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0a2417db7affd86c42ab586288fd4a4f" prot="public">
+          <name>SCL_WLC_E_PFN_NET_LOST</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+<para>PFN network found event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7a6a3c16a7da2c98cce5e08a797ae1f4" prot="public">
+          <name>SCL_WLC_E_RESET_COMPLETE</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para>PFN network lost event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a91cb11d0901c2ef4ac27ee96c9d698c2" prot="public">
+          <name>SCL_WLC_E_JOIN_START</name>
+          <initializer>= 36</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a21dbe2f96683124c00643e98b5000901" prot="public">
+          <name>SCL_WLC_E_ROAM_START</name>
+          <initializer>= 37</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af792097ea35ba96b719c94512793b93e" prot="public">
+          <name>SCL_WLC_E_ASSOC_START</name>
+          <initializer>= 38</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5609d49891ba42428eabbeb2a9f2afc5" prot="public">
+          <name>SCL_WLC_E_IBSS_ASSOC</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5e8f3768ffe4492d7bc60729b83afc33" prot="public">
+          <name>SCL_WLC_E_RADIO</name>
+          <initializer>= 40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a66ef7248cd52da03818c8818f8711d99" prot="public">
+          <name>SCL_WLC_E_PSM_WATCHDOG</name>
+          <initializer>= 41</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a33598eb420a1a2a2b50555564c13eef3" prot="public">
+          <name>SCL_WLC_E_CCX_ASSOC_START</name>
+          <initializer>= 42</initializer>
+          <briefdescription>
+<para>PSM microcode watchdog fired. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af30ec397415123b4f98bbee20cd9d8b2" prot="public">
+          <name>SCL_WLC_E_CCX_ASSOC_ABORT</name>
+          <initializer>= 43</initializer>
+          <briefdescription>
+<para>CCX association start. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af9bd2ee06634fd0f92ee9c966d222b2f" prot="public">
+          <name>SCL_WLC_E_PROBREQ_MSG</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+<para>CCX association abort. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a34235bb46ce51426f26a4d292d02f457" prot="public">
+          <name>SCL_WLC_E_SCAN_CONFIRM_IND</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+<para>probe request received </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a85722fefd2c59d8da042d5f2f30f6b37" prot="public">
+          <name>SCL_WLC_E_PSK_SUP</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7f7915456a8330460377f91c2c2f91ee" prot="public">
+          <name>SCL_WLC_E_COUNTRY_CODE_CHANGED</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+<para>WPA Handshake. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a97e858ea0ef87e546563007c5db1a671" prot="public">
+          <name>SCL_WLC_E_EXCEEDED_MEDIUM_TIME</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab238cc4fe575ac1c4d6241c8d15fc417" prot="public">
+          <name>SCL_WLC_E_ICV_ERROR</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+<para>WMMAC excedded medium time. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3a14e667673d98d866f08df100b35693" prot="public">
+          <name>SCL_WLC_E_UNICAST_DECODE_ERROR</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+<para>WEP ICV error occurred. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a96a2636b51bccb6184e6d6cd5acd607c" prot="public">
+          <name>SCL_WLC_E_MULTICAST_DECODE_ERROR</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+<para>Unsupported unicast encrypted frame. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad243cbcd26ed47a28540ce7d9dd341ab" prot="public">
+          <name>SCL_WLC_E_TRACE</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+<para>Unsupported multicast encrypted frame. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af28cce5a2a11c7c00b5db0596e94823c" prot="public">
+          <name>SCL_WLC_E_BTA_HCI_EVENT</name>
+          <initializer>= 53</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3935011c1935cf4add2e7a1a4ed3a867" prot="public">
+          <name>SCL_WLC_E_IF</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+<para>BT-AMP HCI event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504abaa8579e22e2558a91bc9858414d3261" prot="public">
+          <name>SCL_WLC_E_P2P_DISC_LISTEN_COMPLETE</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+<para>I/F change (for wlan host notification) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab2f33f8d06d69c9dd060e3b6cca1b9db" prot="public">
+          <name>SCL_WLC_E_RSSI</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+<para>P2P Discovery listen state expires. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a64f67aa0510f0a4d0420695cb118fe9a" prot="public">
+          <name>SCL_WLC_E_PFN_BEST_BATCHING</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+<para>indicate RSSI change based on configured levels </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504adaaaaedcd75dd14c0cb9a8dbb8ad9ffe" prot="public">
+          <name>SCL_WLC_E_EXTLOG_MSG</name>
+          <initializer>= 58</initializer>
+          <briefdescription>
+<para>PFN best network batching event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ce707f96a2587415d752feb8651bd79" prot="public">
+          <name>SCL_WLC_E_ACTION_FRAME</name>
+          <initializer>= 59</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a560e46252edd14605cbd9936a18b5b36" prot="public">
+          <name>SCL_WLC_E_ACTION_FRAME_COMPLETE</name>
+          <initializer>= 60</initializer>
+          <briefdescription>
+<para>Action frame reception. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a542640316cd0a91218022d0a0ef7ca4d" prot="public">
+          <name>SCL_WLC_E_PRE_ASSOC_IND</name>
+          <initializer>= 61</initializer>
+          <briefdescription>
+<para>Action frame Tx complete. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ae751b22adf2b638a6fadbecc948120de" prot="public">
+          <name>SCL_WLC_E_PRE_REASSOC_IND</name>
+          <initializer>= 62</initializer>
+          <briefdescription>
+<para>assoc request received </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6db4947a49723ce14f09d44170bee10e" prot="public">
+          <name>SCL_WLC_E_CHANNEL_ADOPTED</name>
+          <initializer>= 63</initializer>
+          <briefdescription>
+<para>re-assoc request received </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a54308864c1e11d221e3492d0c0a91bf9" prot="public">
+          <name>SCL_WLC_E_AP_STARTED</name>
+          <initializer>= 64</initializer>
+          <briefdescription>
+<para>channel adopted (xxx: obsoleted) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af21c2f5d0711ae83f595a7e1bb90bd83" prot="public">
+          <name>SCL_WLC_E_DFS_AP_STOP</name>
+          <initializer>= 65</initializer>
+          <briefdescription>
+<para>AP started. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a67836b893934f764e4ecc4a96b99034f" prot="public">
+          <name>SCL_WLC_E_DFS_AP_RESUME</name>
+          <initializer>= 66</initializer>
+          <briefdescription>
+<para>AP stopped due to DFS. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4a2c6d925045e621e490181dd4e142e5" prot="public">
+          <name>SCL_WLC_E_WAI_STA_EVENT</name>
+          <initializer>= 67</initializer>
+          <briefdescription>
+<para>AP resumed due to DFS. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2ec2f525b5047b680ecf812d4ad6c328" prot="public">
+          <name>SCL_WLC_E_WAI_MSG</name>
+          <initializer>= 68</initializer>
+          <briefdescription>
+<para>WAI stations event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1b39685f4e60c0b2ddacb57c1e164362" prot="public">
+          <name>SCL_WLC_E_ESCAN_RESULT</name>
+          <initializer>= 69</initializer>
+          <briefdescription>
+<para>event encapsulating an WAI message </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6e6552c59403f7aefc5ed150180a2d46" prot="public">
+          <name>SCL_WLC_E_ACTION_FRAME_OFF_CHAN_COMPLETE</name>
+          <initializer>= 70</initializer>
+          <briefdescription>
+<para>escan result event </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aecc7717ce114a45bbfa761385368ac29" prot="public">
+          <name>SCL_WLC_E_PROBRESP_MSG</name>
+          <initializer>= 71</initializer>
+          <briefdescription>
+<para>action frame off channel complete </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a23ecab2a7de6667a72b2836297a58f9f" prot="public">
+          <name>SCL_WLC_E_P2P_PROBREQ_MSG</name>
+          <initializer>= 72</initializer>
+          <briefdescription>
+<para>probe response received </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac55e66bc3156c0f8af512b232e190e72" prot="public">
+          <name>SCL_WLC_E_DCS_REQUEST</name>
+          <initializer>= 73</initializer>
+          <briefdescription>
+<para>P2P Probe request received. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a310b5733e2c658fc2cdf8faac35988c1" prot="public">
+          <name>SCL_WLC_E_FIFO_CREDIT_MAP</name>
+          <initializer>= 74</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6f8a08c60d1fd9fc49d13db377b68622" prot="public">
+          <name>SCL_WLC_E_ACTION_FRAME_RX</name>
+          <initializer>= 75</initializer>
+          <briefdescription>
+<para>credits for D11 FIFOs. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>[AC0,AC1,AC2,AC3,BC_MC,ATIM] </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab167b49bf71ad3196f0ea8e6726e1e70" prot="public">
+          <name>SCL_WLC_E_WAKE_EVENT</name>
+          <initializer>= 76</initializer>
+          <briefdescription>
+<para>Received action frame event WITH wl_event_rx_frame_data_t header. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5ec8e41163fe8282a49ca4a99d6a9b3a" prot="public">
+          <name>SCL_WLC_E_RM_COMPLETE</name>
+          <initializer>= 77</initializer>
+          <briefdescription>
+<para>Wake Event timer fired, used for wake WLAN test mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4bab12cfddf44ac3ca90cf333b49fa64" prot="public">
+          <name>SCL_WLC_E_HTSFSYNC</name>
+          <initializer>= 78</initializer>
+          <briefdescription>
+<para>Radio measurement complete. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7384cd87ce947a06a1f6ec019e1af19b" prot="public">
+          <name>SCL_WLC_E_OVERLAY_REQ</name>
+          <initializer>= 79</initializer>
+          <briefdescription>
+<para>Synchronize TSF with the host. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a62ff260ace8b87796299c180329d6046" prot="public">
+          <name>SCL_WLC_E_CSA_COMPLETE_IND</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+<para>request an overlay IOCTL/iovar from the host </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a953bb7c6d6deb12eb6f299d414c3010f" prot="public">
+          <name>SCL_WLC_E_EXCESS_PM_WAKE_EVENT</name>
+          <initializer>= 81</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afd77de06bf2a39f398fc91f9c0ff549f" prot="public">
+          <name>SCL_WLC_E_PFN_SCAN_NONE</name>
+          <initializer>= 82</initializer>
+          <briefdescription>
+<para>excess PM Wake Event to inform host <linebreak/>
+ </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a162e32a0101bbfcc3534ee962f9dad13" prot="public">
+          <name>SCL_WLC_E_PFN_SCAN_ALLGONE</name>
+          <initializer>= 83</initializer>
+          <briefdescription>
+<para>no PFN networks around </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a27fee71167b1ab417e1019cb51edb930" prot="public">
+          <name>SCL_WLC_E_GTK_PLUMBED</name>
+          <initializer>= 84</initializer>
+          <briefdescription>
+<para>last found PFN network gets lost </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a767c4d5ac1b2668b2873e40afa3e4a3f" prot="public">
+          <name>SCL_WLC_E_ASSOC_IND_NDIS</name>
+          <initializer>= 85</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8161f79be7bc3169dbe4b625283f385d" prot="public">
+          <name>SCL_WLC_E_REASSOC_IND_NDIS</name>
+          <initializer>= 86</initializer>
+          <briefdescription>
+<para>802.11 ASSOC indication for NDIS only </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa1e1eaaa5f9c62be18322b89fccdb482" prot="public">
+          <name>SCL_WLC_E_ASSOC_REQ_IE</name>
+          <initializer>= 87</initializer>
+          <briefdescription>
+<para>802.11 REASSOC indication for NDIS only </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0083e2dae88b3ac06f233ff831b4a907" prot="public">
+          <name>SCL_WLC_E_ASSOC_RESP_IE</name>
+          <initializer>= 88</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504abb8fa1895fe454c074eb60994185bb80" prot="public">
+          <name>SCL_WLC_E_ASSOC_RECREATED</name>
+          <initializer>= 89</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a58f9de06400789f74ba59cdc50bdf5da" prot="public">
+          <name>SCL_WLC_E_ACTION_FRAME_RX_NDIS</name>
+          <initializer>= 90</initializer>
+          <briefdescription>
+<para>association recreated on resume </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a134a85034cd2deb189df6fc5115b6dfb" prot="public">
+          <name>SCL_WLC_E_AUTH_REQ</name>
+          <initializer>= 91</initializer>
+          <briefdescription>
+<para>rx action frame event for NDIS only </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a83a0f7c3d62bf90d68ace4536e93e951" prot="public">
+          <name>SCL_WLC_E_TDLS_PEER_EVENT</name>
+          <initializer>= 92</initializer>
+          <briefdescription>
+<para>authentication request received </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afbc86bcb5a565d819f696f195c79b488" prot="public">
+          <name>SCL_WLC_E_MESH_DHCP_SUCCESS</name>
+          <initializer>= 92</initializer>
+          <briefdescription>
+<para>discovered peer, connected/disconnected peer </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1e7ecd058df9a986c2b83139ef72835b" prot="public">
+          <name>SCL_WLC_E_SPEEDY_RECREATE_FAIL</name>
+          <initializer>= 93</initializer>
+          <briefdescription>
+<para>DHCP handshake successful for a mesh interface. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a313c2e4f536cfbb845adb6792b76c79a" prot="public">
+          <name>SCL_WLC_E_NATIVE</name>
+          <initializer>= 94</initializer>
+          <briefdescription>
+<para>fast assoc recreation failed </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab40a2f178dfab3d0b29bf841abe1567c" prot="public">
+          <name>SCL_WLC_E_PKTDELAY_IND</name>
+          <initializer>= 95</initializer>
+          <briefdescription>
+<para>port-specific event and payload (e.g. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>NDIS) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8ba3ecac77478c8b582bc2cdc3a01ae4" prot="public">
+          <name>SCL_WLC_E_AWDL_AW</name>
+          <initializer>= 96</initializer>
+          <briefdescription>
+<para>event for tx pkt delay suddently jump </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a49bd9f9ffae403a681efd075c939c704" prot="public">
+          <name>SCL_WLC_E_AWDL_ROLE</name>
+          <initializer>= 97</initializer>
+          <briefdescription>
+<para>AWDL AW period starts. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504abdced9bd9664be70d875656cc8a4c8b8" prot="public">
+          <name>SCL_WLC_E_AWDL_EVENT</name>
+          <initializer>= 98</initializer>
+          <briefdescription>
+<para>AWDL Master/Slave/NE master role event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5225316e5367cc5f078985e2a343e58b" prot="public">
+          <name>SCL_WLC_E_NIC_AF_TXS</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+<para>Generic AWDL event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1880f11d58f0473364635c5b94b77f4d" prot="public">
+          <name>SCL_WLC_E_NAN</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+<para>NIC AF txstatus. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7bed2f5f4ce866050db7c065e7058707" prot="public">
+          <name>SCL_WLC_E_BEACON_FRAME_RX</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+<para>NAN event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ade9b6b7b44666a5f84a5b6f38d7bebbb" prot="public">
+          <name>SCL_WLC_E_SERVICE_FOUND</name>
+          <initializer>= 102</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ce325b4e0fac3c3658275c909ec66df" prot="public">
+          <name>SCL_WLC_E_GAS_FRAGMENT_RX</name>
+          <initializer>= 103</initializer>
+          <briefdescription>
+<para>desired service found </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2e2bbd7ab502bd446c865b72d5df4b59" prot="public">
+          <name>SCL_WLC_E_GAS_COMPLETE</name>
+          <initializer>= 104</initializer>
+          <briefdescription>
+<para>GAS fragment received. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7445c9c7f6a6337cd4ecf9e57c6c0329" prot="public">
+          <name>SCL_WLC_E_P2PO_ADD_DEVICE</name>
+          <initializer>= 105</initializer>
+          <briefdescription>
+<para>GAS sessions all complete. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2744eaf5e4968b9ebc35cff06e754d86" prot="public">
+          <name>SCL_WLC_E_P2PO_DEL_DEVICE</name>
+          <initializer>= 106</initializer>
+          <briefdescription>
+<para>New device found by p2p offload. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4281b8231a2dc5ad92181d8cdacdd0cd" prot="public">
+          <name>SCL_WLC_E_WNM_STA_SLEEP</name>
+          <initializer>= 107</initializer>
+          <briefdescription>
+<para>device has been removed by p2p offload </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6725d24501e905cc8a8b25cea986998f" prot="public">
+          <name>SCL_WLC_E_TXFAIL_THRESH</name>
+          <initializer>= 108</initializer>
+          <briefdescription>
+<para>WNM event to notify STA enter sleep mode. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a9ecf30c5f2e6674589b968e0d430317b" prot="public">
+          <name>SCL_WLC_E_PROXD</name>
+          <initializer>= 109</initializer>
+          <briefdescription>
+<para>Indication of MAC tx failures (exhaustion of 802.11 retries) exceeding threshold(s) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe10f2db8bc973217665b783a49ffa74" prot="public">
+          <name>SCL_WLC_E_IBSS_COALESCE</name>
+          <initializer>= 110</initializer>
+          <briefdescription>
+<para>Proximity Detection event. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a81069a7eca971d1d3cb82cb885e068e6" prot="public">
+          <name>SCL_WLC_E_MESH_PAIRED</name>
+          <initializer>= 110</initializer>
+          <briefdescription>
+<para>IBSS Coalescing. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa84ef24a956d3dd97251d1ae2df20e75" prot="public">
+          <name>SCL_WLC_E_AWDL_RX_PRB_RESP</name>
+          <initializer>= 111</initializer>
+          <briefdescription>
+<para>Mesh peer found and paired. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3f291ca3122754a53bd39bbbb637f500" prot="public">
+          <name>SCL_WLC_E_AWDL_RX_ACT_FRAME</name>
+          <initializer>= 112</initializer>
+          <briefdescription>
+<para>AWDL RX Probe response. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac937213d2be6432e76b39e83493694f9" prot="public">
+          <name>SCL_WLC_E_AWDL_WOWL_NULLPKT</name>
+          <initializer>= 113</initializer>
+          <briefdescription>
+<para>AWDL RX Action Frames. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a34e0ae01a42f0e05e91d922ab0e506dc" prot="public">
+          <name>SCL_WLC_E_AWDL_PHYCAL_STATUS</name>
+          <initializer>= 114</initializer>
+          <briefdescription>
+<para>AWDL Wowl nulls. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aea1487cc6807e4a3425242bd048dcbf4" prot="public">
+          <name>SCL_WLC_E_AWDL_OOB_AF_STATUS</name>
+          <initializer>= 115</initializer>
+          <briefdescription>
+<para>AWDL Phycal status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0fbe1b06fe060602db5de4bc7a3a7bb0" prot="public">
+          <name>SCL_WLC_E_AWDL_SCAN_STATUS</name>
+          <initializer>= 116</initializer>
+          <briefdescription>
+<para>AWDL OOB AF status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a930646bd7c85cae1b237942976c7ba6c" prot="public">
+          <name>SCL_WLC_E_AWDL_AW_START</name>
+          <initializer>= 117</initializer>
+          <briefdescription>
+<para>Interleaved Scan status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a16623140f7f079fcdbc837eb96568a50" prot="public">
+          <name>SCL_WLC_E_AWDL_AW_END</name>
+          <initializer>= 118</initializer>
+          <briefdescription>
+<para>AWDL AW Start. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aec62e3a1c548cefa0970d4197e65dab9" prot="public">
+          <name>SCL_WLC_E_AWDL_AW_EXT</name>
+          <initializer>= 119</initializer>
+          <briefdescription>
+<para>AWDL AW End. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a9ed09727d414ae072261e9c40b2e0f2a" prot="public">
+          <name>SCL_WLC_E_AWDL_PEER_CACHE_CONTROL</name>
+          <initializer>= 120</initializer>
+          <briefdescription>
+<para>AWDL AW Extensions. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aca98d09b296a3c219ed7b0ad67b4ff88" prot="public">
+          <name>SCL_WLC_E_CSA_START_IND</name>
+          <initializer>= 121</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8a4d2f1f0dbbc5f077907d3c62ba75e8" prot="public">
+          <name>SCL_WLC_E_CSA_DONE_IND</name>
+          <initializer>= 122</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ae2eb60dad7c1880aef1235a7cf71a1" prot="public">
+          <name>SCL_WLC_E_CSA_FAILURE_IND</name>
+          <initializer>= 123</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4a8b7f7870557539be434742a5e080e1" prot="public">
+          <name>SCL_WLC_E_CCA_CHAN_QUAL</name>
+          <initializer>= 124</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad72be492658b1392352cbd1a8618dbf7" prot="public">
+          <name>SCL_WLC_E_BSSID</name>
+          <initializer>= 125</initializer>
+          <briefdescription>
+<para>CCA based channel quality report. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5aba03179fb7661f862df1525d964d7a" prot="public">
+          <name>SCL_WLC_E_TX_STAT_ERROR</name>
+          <initializer>= 126</initializer>
+          <briefdescription>
+<para>to report change in BSSID while roaming </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504adb379db22c3914b7d6478d4b37a53a0e" prot="public">
+          <name>SCL_WLC_E_BCMC_CREDIT_SUPPORT</name>
+          <initializer>= 127</initializer>
+          <briefdescription>
+<para>tx error indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac7c831904841156c47e3e6c581d22648" prot="public">
+          <name>SCL_WLC_E_PSTA_PRIMARY_INTF_IND</name>
+          <initializer>= 128</initializer>
+          <briefdescription>
+<para>credit check for BCMC supported </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af7a9ef5c25789133757b1d3ea60d3324" prot="public">
+          <name>SCL_WLC_E_BT_WIFI_HANDOVER_REQ</name>
+          <initializer>= 130</initializer>
+          <briefdescription>
+<para>psta primary interface indication </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac0d05bc4ba21cba3852fce2a0dcc6ebc" prot="public">
+          <name>SCL_WLC_E_SPW_TXINHIBIT</name>
+          <initializer>= 131</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afd6dd00af10b9fcc3d09b059360b1cc6" prot="public">
+          <name>SCL_WLC_E_FBT_AUTH_REQ_IND</name>
+          <initializer>= 132</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a013b86672eb250bb9665c64cb462be67" prot="public">
+          <name>SCL_WLC_E_RSSI_LQM</name>
+          <initializer>= 133</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a571bba181836841845f5787f7ec63c67" prot="public">
+          <name>SCL_WLC_E_PFN_GSCAN_FULL_RESULT</name>
+          <initializer>= 134</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad54facb947fa166d9eeeaab2ffa520b7" prot="public">
+          <name>SCL_WLC_E_PFN_SWC</name>
+          <initializer>= 135</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1ef3268c53fa8b52df91ca053fe6a95f" prot="public">
+          <name>SCL_WLC_E_AUTHORIZED</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad2b88d7225ce6697b356c31c864c8fbe" prot="public">
+          <name>SCL_WLC_E_PROBREQ_MSG_RX</name>
+          <initializer>= 137</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ae502e763a43c46b21edb5acfbbc5451d" prot="public">
+          <name>SCL_WLC_E_PFN_SCAN_COMPLETE</name>
+          <initializer>= 138</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab1ed5e69ce7feaf91970a26589c08cdb" prot="public">
+          <name>SCL_WLC_E_RMC_EVENT</name>
+          <initializer>= 139</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4ea2a316b97e62ff090a9b949dea73fe" prot="public">
+          <name>SCL_WLC_E_DPSTA_INTF_IND</name>
+          <initializer>= 140</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7af5e8bd9d19b9819154e5b888c71938" prot="public">
+          <name>SCL_WLC_E_RRM</name>
+          <initializer>= 141</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af1e785680b0e48c94a390ee95681baac" prot="public">
+          <name>SCL_WLC_E_ULP</name>
+          <initializer>= 146</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a97e988c68b667ae19ef8fb3780d6fe7a" prot="public">
+          <name>SCL_WLC_E_TKO</name>
+          <initializer>= 151</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1f1a43a38ae262db5615d650b6792db0" prot="public">
+          <name>SCL_WLC_E_LAST</name>
+          <initializer>= 152</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumerated list of event types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="276" column="1" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="275" bodyend="406"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="scl__types_8h_1ab797194a7b2cf547bec44324fbb117a4" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t scl_wl_chanspec_t</definition>
+        <argsstring></argsstring>
+        <name>scl_wl_chanspec_t</name>
+        <briefdescription>
+<para>Channel specified in uint16_t. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" line="229" column="18" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines common data types used in SCL </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018-2020<sp/>Cypress<sp/>Semiconductor<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scl__common_8h" kindref="compound">scl_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_SCL_TYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_SCL_TYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Macros</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSID_NAME_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(33)<sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor">#define<sp/>WEP_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001<sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#define<sp/>TKIP_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0002<sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#define<sp/>AES_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0004<sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#define<sp/>SHARED_ENABLED<sp/><sp/><sp/><sp/><sp/>0x00008000<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#define<sp/>WPA_SECURITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00200000<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor">#define<sp/>WPA2_SECURITY<sp/><sp/><sp/><sp/><sp/><sp/>0x00400000<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor">#define<sp/>WPA3_SECURITY<sp/><sp/><sp/><sp/><sp/><sp/>0x01000000<sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#define<sp/>ENTERPRISE_ENABLED<sp/>0x02000000<sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor">#define<sp/>WPS_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10000000<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor">#define<sp/>IBSS_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20000000<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#define<sp/>FBT_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40000000<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#define<sp/>NO_POWERSAVE_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">#define<sp/>PM1_POWERSAVE_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1)<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#define<sp/>PM2_POWERSAVE_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor">#define<sp/>SCL_MAX_EVENT_SUBSCRIPTION<sp/><sp/><sp/><sp/><sp/><sp/>(33)<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor">#define<sp/>SCL_EVENT_NOT_REGISTERED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0xFF)<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor">#define<sp/>SCL_EVENT_HANDLER_LIST_SIZE<sp/><sp/><sp/><sp/><sp/>(5)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor">#define<sp/>UNUSED_PARAMETER(x)<sp/>(<sp/>(void)(x)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor">#define<sp/>UNUSED_VARIABLE(x)<sp/>(<sp/>(void)(x)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor">#define<sp/>REFERENCE_DEBUG_ONLY_VARIABLE(x)<sp/>(<sp/>(void)(x)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constants</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Structures<sp/>and<sp/>Enumerations</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a86f904c2b846eef773b9200212046dcd" kindref="member">SCL_SECURITY_OPEN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ad48007b9e1fe1972d5c4070642d7f26b" kindref="member">SCL_SECURITY_WEP_PSK</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="scl__types_8h_1a4199a1b37dba92f482ff0b9eb406c323" kindref="member">WEP_ENABLED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ab7c67fff083e10fe48d11c29558b1d39" kindref="member">SCL_SECURITY_WEP_SHARED</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a4199a1b37dba92f482ff0b9eb406c323" kindref="member">WEP_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a4d4a4586c264fe8e4acb0bf7169b7b0f" kindref="member">SHARED_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae98e5d51446406bd53805807f40c70b8" kindref="member">SCL_SECURITY_WPA_TKIP_PSK</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a29a27e98cf3c95da855b5577825d270e" kindref="member">SCL_SECURITY_WPA_AES_PSK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a328af64a5bfe6959a75d150bb500f4fe" kindref="member">SCL_SECURITY_WPA_MIXED_PSK</ref><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa88617f6384eea8a0f7a6abe0f84ec81" kindref="member">SCL_SECURITY_WPA2_AES_PSK</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae1efdd5c152b318166d6f6560393261e" kindref="member">SCL_SECURITY_WPA2_TKIP_PSK</ref><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ae28655d240b846e6cfd00676704d322d" kindref="member">SCL_SECURITY_WPA2_MIXED_PSK</ref><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a5663ce3870a19a2d01c816e54417f2ba" kindref="member">SCL_SECURITY_WPA2_FBT_PSK</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1aafdddf85f4d0df08ee3aead815ad7c76" kindref="member">FBT_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a23e95b5998fa405fecd423e416cff179" kindref="member">SCL_SECURITY_WPA3_SAE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ad175824d1581f69f5a725e4c9171aa79" kindref="member">WPA3_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a6846340f2b57b8e1406cb5952d4d1aec" kindref="member">SCL_SECURITY_WPA2_WPA_AES_PSK</ref><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a2c145ac8272198c2dd3ad9949674a4c6" kindref="member">SCL_SECURITY_WPA2_WPA_MIXED_PSK</ref><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a5d9d2fe7c0130877be4e2f8d1d7f2311" kindref="member">SCL_SECURITY_WPA3_WPA2_PSK</ref><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ad175824d1581f69f5a725e4c9171aa79" kindref="member">WPA3_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ac9cb906c3b88a9bdc0ade00651f0c771" kindref="member">SCL_SECURITY_WPA2_WPA_PSK</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a170cf7999b9e915c45d945e72e6ef087" kindref="member">SCL_SECURITY_WPA2_WPA_TKIP_PSK</ref><sp/>=<sp/>(<ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a644c609edc87ebba035f2de49ac62f1a" kindref="member">SCL_SECURITY_WPA_TKIP_ENT</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67acee17758cf43103a3a3b8736f7ffa032" kindref="member">SCL_SECURITY_WPA_AES_ENT</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa8e4e60ef3977f23abae498e391dcb81" kindref="member">SCL_SECURITY_WPA_MIXED_ENT</ref><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1aa7ccd472bacbd8ee01f31f0f0e2ce3dc" kindref="member">WPA_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67adccfe4e43b721376adeb3a5bac94a714" kindref="member">SCL_SECURITY_WPA2_TKIP_ENT</ref><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67af5c5e8ba6b8c3de871d3c989b2691a4e" kindref="member">SCL_SECURITY_WPA2_AES_ENT</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67aa23b01657d269dadc56692a9655ca69b" kindref="member">SCL_SECURITY_WPA2_MIXED_ENT</ref><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a20f0d7118c2d35a688bcdc5b8b0920d9" kindref="member">TKIP_ENABLED</ref>),<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a0e83dca81b6fe104e6f9cf45a07bac80" kindref="member">SCL_SECURITY_WPA2_FBT_ENT</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1ada6d6331053c0f88c63d77ba8d2019c8" kindref="member">ENTERPRISE_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a8875737a0403d2136a69bbc96401cccf" kindref="member">WPA2_SECURITY</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1aafdddf85f4d0df08ee3aead815ad7c76" kindref="member">FBT_ENABLED</ref>),<sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ad886638286e66e06c8e3fa714146c9a0" kindref="member">SCL_SECURITY_IBSS_OPEN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1a9640c064932a3a633a3312b737658f83" kindref="member">IBSS_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a42bca33cf42db8341589161fc90a08ac" kindref="member">SCL_SECURITY_WPS_OPEN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1aaae7e8a0eb357cae8f130f9099d8e7b8" kindref="member">WPS_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67ac25ebb997080ba93473a3171bb168393" kindref="member">SCL_SECURITY_WPS_SECURE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="scl__types_8h_1aaae7e8a0eb357cae8f130f9099d8e7b8" kindref="member">WPS_ENABLED</ref><sp/>|<sp/><ref refid="scl__types_8h_1a577a9dbc615ba145496a41a2035bd615" kindref="member">AES_ENABLED</ref>),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a8bda7dcf292a27fe457096fbabeb59eb" kindref="member">SCL_SECURITY_UNKNOWN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67a35af276654937141437e8c912966ac73" kindref="member">SCL_SECURITY_FORCE_32_BIT</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7fffffff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67" kindref="member">scl_security_t</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64dae5d47ffbe5bfd0a406b4f44d9b6a9c6c" kindref="member">SCL_802_11_BAND_5GHZ</ref><sp/><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64da6d111a8b6f67923956f9129e9872cf0f" kindref="member">SCL_802_11_BAND_2_4GHZ</ref><sp/>=<sp/>1<sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="structscl__listen__interval__t" refkind="compound"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64d" kindref="member">scl_802_11_band_t</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>beacon;<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>dtim;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>assoc;<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}<sp/><ref refid="structscl__listen__interval__t" kindref="compound">scl_listen_interval_t</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea43c77a264c5a68ba7402d272d5818485" kindref="member">SCL_SCAN_TYPE_ACTIVE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00,<sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea325ca62baea89d873496847dc2f6e086" kindref="member">SCL_SCAN_TYPE_PASSIVE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x01,<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47eadbab2440a09df91733882418c643c607" kindref="member">SCL_SCAN_TYPE_PNO</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x02,<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea9e84ff288b7e8c32359d5d6c1898804d" kindref="member">SCL_SCAN_TYPE_PROHIBITED_CHANNELS</ref><sp/>=<sp/>0x04,<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47ea522c7c1ae2ff3acd70bc336ec14bc50e" kindref="member">SCL_SCAN_TYPE_NO_BSSID_FILTER</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x08<sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1a6ac4a99c8190f2f61e63b7fc5349f47e" kindref="member">scl_scan_type_t</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa7b039658e58a158ce54a1219e026fc91" kindref="member">SCL_BSS_TYPE_INFRASTRUCTURE</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fab969be0fc08cae910fcfb820d7663ed6" kindref="member">SCL_BSS_TYPE_ADHOC</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa4a800e68a8f050f9faff956ce591b82a" kindref="member">SCL_BSS_TYPE_ANY</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa643a49227a45f193bdabbef53f114488" kindref="member">SCL_BSS_TYPE_MESH</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92fa13a1230cb01063bb97731ce9674bc775" kindref="member">SCL_BSS_TYPE_UNKNOWN</ref><sp/>=<sp/>-1<sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92f" kindref="member">scl_bss_type_t</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>length;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>value[<ref refid="scl__types_8h_1a9ee2fe056ad3787e30bb8da7248592c7" kindref="member">SSID_NAME_SIZE</ref>];<sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}<sp/><ref refid="structscl__ssid__t" kindref="compound">scl_ssid_t</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1ba9d48c63c00486124e6bc25d8db1ec138" kindref="member">SCL_SCAN_INCOMPLETE</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1bad39efc1c23ec7a0c7d67f568e6f52a85" kindref="member">SCL_SCAN_COMPLETED_SUCCESSFULLY</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1bad4f3132ab91a0e896e7477b92dbd5075" kindref="member">SCL_SCAN_ABORTED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1a3936863aacd5c7f6573aa494ef322a1b" kindref="member">scl_scan_status_t</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>number_of_probes_per_channel;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>scan_active_dwell_time_per_channel_ms;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>scan_passive_dwell_time_per_channel_ms;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>scan_home_channel_dwell_time_between_channels_ms;<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}<sp/><ref refid="structscl__scan__extended__params__t" kindref="compound">scl_scan_extended_params_t</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor">#pragma<sp/>pack(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scl_scan_result</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structscl__ssid__t" kindref="compound">scl_ssid_t</ref><sp/>SSID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structscl__mac__t" kindref="compound">scl_mac_t</ref><sp/>BSSID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>signal_strength;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>max_data_rate;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1a2f3bd2bff982264490a05a98fe12a92f" kindref="member">scl_bss_type_t</ref><sp/>bss_type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67" kindref="member">scl_security_t</ref><sp/>security;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>channel;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1ad051fe45f0dabb3458843ea84a66a64d" kindref="member">scl_802_11_band_t</ref><sp/>band;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ccode[2];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>flags;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scl_scan_result<sp/>*next;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*ie_ptr;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ie_len;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}<sp/><ref refid="structscl__scan__result__t" kindref="compound">scl_scan_result_t</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scl_simple_scan_result</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structscl__ssid__t" kindref="compound">scl_ssid_t</ref><sp/>SSID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structscl__mac__t" kindref="compound">scl_mac_t</ref><sp/>BSSID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>signal_strength;<sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1af9ee3597a0970d1df20492b765892a67" kindref="member">scl_security_t</ref><sp/>security;<sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>channel;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}<sp/><ref refid="structscl__sync__scan__result__t" kindref="compound">scl_sync_scan_result_t</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="scl__types_8h_1ab797194a7b2cf547bec44324fbb117a4" kindref="member">scl_wl_chanspec_t</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor">#define<sp/>MCSSET_LEN<sp/><sp/><sp/><sp/>16<sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor">typedef<sp/>struct<sp/>scl_wl_bss_info_struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>version;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>length;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structscl__mac__t" kindref="compound">scl_mac_t</ref><sp/>BSSID;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>beacon_period;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>capability;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>SSID_len;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>SSID[32];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>count;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>rates[16];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>rateset;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1ab797194a7b2cf547bec44324fbb117a4" kindref="member">scl_wl_chanspec_t</ref><sp/>chanspec;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>atim_window;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>dtim_period;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>RSSI;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>phy_noise;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>n_cap;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>nbss_cap;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ctl_ch;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>reserved32[1];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>flags;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>reserved[3];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>basic_mcs[<ref refid="scl__types_8h_1aa44a8901a98f9868efefee50db967736" kindref="member">MCSSET_LEN</ref>];<sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>ie_offset;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>ie_length;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>SNR;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>new<sp/>fields<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>variable<sp/>length<sp/>Information<sp/>Elements<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}<sp/><ref refid="structscl__wl__bss__info__t" kindref="compound">scl_wl_bss_info_t</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_NONE<sp/>=<sp/>0x7FFFFFFE,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_SET_SSID<sp/>=<sp/>0<sp/>,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_JOIN<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ace7e6d0ceee0c85052feb38506182840" kindref="member">SCL_WLC_E_START</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aef6e7ee23ee2d1102e258b3efc8b4911" kindref="member">SCL_WLC_E_AUTH</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a417311498fb730320c05e28a1cef934e" kindref="member">SCL_WLC_E_AUTH_IND</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ae8cd2d04932d17b7a7e85aca950d8a8d" kindref="member">SCL_WLC_E_DEAUTH</ref><sp/>=<sp/>5,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4e5c6d2919e4ff43550524c7670d8c1c" kindref="member">SCL_WLC_E_DEAUTH_IND</ref><sp/>=<sp/>6,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0d4e06953a012521548a2043f3952822" kindref="member">SCL_WLC_E_ASSOC</ref><sp/>=<sp/>7,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3749fca75928318bc137bd3d13bee1b1" kindref="member">SCL_WLC_E_ASSOC_IND</ref><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a30ce84d8f8f0a946c3234b50f846dd16" kindref="member">SCL_WLC_E_REASSOC</ref><sp/>=<sp/>9,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad6ca0c4ae62150d515d0fa85d469dbba" kindref="member">SCL_WLC_E_REASSOC_IND</ref><sp/>=<sp/>10,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8b8ce2cd9bead148fdcd19a63a358f83" kindref="member">SCL_WLC_E_DISASSOC</ref><sp/>=<sp/>11,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a684e8c6a2f8ca3f94f4750c048dacb5e" kindref="member">SCL_WLC_E_DISASSOC_IND</ref><sp/>=<sp/>12,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6a2850bdbf8be6db42306b3b64c949e9" kindref="member">SCL_WLC_E_QUIET_START</ref><sp/>=<sp/>13,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afd9167ab090a85ac9b7d9fbea8a49739" kindref="member">SCL_WLC_E_QUIET_END</ref><sp/>=<sp/>14,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5d13f5b213f3a9e25b63a6f08e108e04" kindref="member">SCL_WLC_E_BEACON_RX</ref><sp/>=<sp/>15,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe5c4901c57f49aee9b55ac1baa5addd" kindref="member">SCL_WLC_E_LINK</ref><sp/>=<sp/>16,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a73d69363a67b26826ed243ba6d1b7af7" kindref="member">SCL_WLC_E_MIC_ERROR</ref><sp/>=<sp/>17,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a144efea5d99370203773fa66aa6ce987" kindref="member">SCL_WLC_E_NDIS_LINK</ref><sp/>=<sp/>18,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3a7f08a090eea87c341930dc6ba0b722" kindref="member">SCL_WLC_E_ROAM</ref><sp/>=<sp/>19,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac696332de7d07e5278f00a89cba0e1f1" kindref="member">SCL_WLC_E_TXFAIL</ref><sp/>=<sp/>20,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a97266d0748f152f580e3469433927f52" kindref="member">SCL_WLC_E_PMKID_CACHE</ref><sp/>=<sp/>21,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afcd85e73b7daa4e0598503423b59287c" kindref="member">SCL_WLC_E_RETROGRADE_TSF</ref><sp/>=<sp/>22,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa06e0c5a453aaf4c2ba0902529302fda" kindref="member">SCL_WLC_E_PRUNE</ref><sp/>=<sp/>23,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab7b8c85ab7152fffd3bd2f596c1801f4" kindref="member">SCL_WLC_E_AUTOAUTH</ref><sp/>=<sp/>24,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a26bbe02c4460f841333e0f90efee2d3e" kindref="member">SCL_WLC_E_EAPOL_MSG</ref><sp/>=<sp/>25,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe3f315623da56dc00dc5e6ea0ad61e5" kindref="member">SCL_WLC_E_SCAN_COMPLETE</ref><sp/>=<sp/>26,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a03c7dbe1f13ab0b2a5ef7b59b3f06a3b" kindref="member">SCL_WLC_E_ADDTS_IND</ref><sp/>=<sp/>27,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a433faaa62b8ad0110794c843ea278967" kindref="member">SCL_WLC_E_DELTS_IND</ref><sp/>=<sp/>28,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6a4d5833cd73ae61ed1eda393dae3d66" kindref="member">SCL_WLC_E_BCNSENT_IND</ref><sp/>=<sp/>29,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad9a5d2e122434d2922003816e89f1f42" kindref="member">SCL_WLC_E_BCNRX_MSG</ref><sp/>=<sp/>30,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ad36cb4f1feee3a99e5a9cbf4e2db83" kindref="member">SCL_WLC_E_BCNLOST_MSG</ref><sp/>=<sp/>31,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a98c053877371849ea153963f954fdeb0" kindref="member">SCL_WLC_E_ROAM_PREP</ref><sp/>=<sp/>32,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1820d1e21347758e990d28fc91076185" kindref="member">SCL_WLC_E_PFN_NET_FOUND</ref><sp/>=<sp/>33,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0a2417db7affd86c42ab586288fd4a4f" kindref="member">SCL_WLC_E_PFN_NET_LOST</ref><sp/>=<sp/>34,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7a6a3c16a7da2c98cce5e08a797ae1f4" kindref="member">SCL_WLC_E_RESET_COMPLETE</ref><sp/>=<sp/>35,<sp/>SCL_WLC_E_JOIN_START<sp/>=<sp/>36,<sp/>SCL_WLC_E_ROAM_START<sp/>=<sp/>37,<sp/>SCL_WLC_E_ASSOC_START<sp/>=<sp/>38,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_IBSS_ASSOC<sp/>=<sp/>39,<sp/>SCL_WLC_E_RADIO<sp/>=<sp/>40,<sp/>SCL_WLC_E_PSM_WATCHDOG<sp/>=<sp/>41,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a33598eb420a1a2a2b50555564c13eef3" kindref="member">SCL_WLC_E_CCX_ASSOC_START</ref><sp/>=<sp/>42,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af30ec397415123b4f98bbee20cd9d8b2" kindref="member">SCL_WLC_E_CCX_ASSOC_ABORT</ref><sp/>=<sp/>43,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af9bd2ee06634fd0f92ee9c966d222b2f" kindref="member">SCL_WLC_E_PROBREQ_MSG</ref><sp/>=<sp/>44,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a34235bb46ce51426f26a4d292d02f457" kindref="member">SCL_WLC_E_SCAN_CONFIRM_IND</ref><sp/>=<sp/>45,<sp/>SCL_WLC_E_PSK_SUP<sp/>=<sp/>46,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7f7915456a8330460377f91c2c2f91ee" kindref="member">SCL_WLC_E_COUNTRY_CODE_CHANGED</ref><sp/>=<sp/>47,<sp/>SCL_WLC_E_EXCEEDED_MEDIUM_TIME<sp/>=<sp/>48,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab238cc4fe575ac1c4d6241c8d15fc417" kindref="member">SCL_WLC_E_ICV_ERROR</ref><sp/>=<sp/>49,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3a14e667673d98d866f08df100b35693" kindref="member">SCL_WLC_E_UNICAST_DECODE_ERROR</ref><sp/>=<sp/>50,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a96a2636b51bccb6184e6d6cd5acd607c" kindref="member">SCL_WLC_E_MULTICAST_DECODE_ERROR</ref><sp/>=<sp/>51,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad243cbcd26ed47a28540ce7d9dd341ab" kindref="member">SCL_WLC_E_TRACE</ref><sp/>=<sp/>52,<sp/>SCL_WLC_E_BTA_HCI_EVENT<sp/>=<sp/>53,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3935011c1935cf4add2e7a1a4ed3a867" kindref="member">SCL_WLC_E_IF</ref><sp/>=<sp/>54,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504abaa8579e22e2558a91bc9858414d3261" kindref="member">SCL_WLC_E_P2P_DISC_LISTEN_COMPLETE</ref><sp/>=<sp/>55,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab2f33f8d06d69c9dd060e3b6cca1b9db" kindref="member">SCL_WLC_E_RSSI</ref><sp/>=<sp/>56,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a64f67aa0510f0a4d0420695cb118fe9a" kindref="member">SCL_WLC_E_PFN_BEST_BATCHING</ref><sp/>=<sp/>57,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504adaaaaedcd75dd14c0cb9a8dbb8ad9ffe" kindref="member">SCL_WLC_E_EXTLOG_MSG</ref><sp/>=<sp/>58,<sp/>SCL_WLC_E_ACTION_FRAME<sp/>=<sp/>59,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a560e46252edd14605cbd9936a18b5b36" kindref="member">SCL_WLC_E_ACTION_FRAME_COMPLETE</ref><sp/>=<sp/>60,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a542640316cd0a91218022d0a0ef7ca4d" kindref="member">SCL_WLC_E_PRE_ASSOC_IND</ref><sp/>=<sp/>61,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ae751b22adf2b638a6fadbecc948120de" kindref="member">SCL_WLC_E_PRE_REASSOC_IND</ref><sp/>=<sp/>62,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6db4947a49723ce14f09d44170bee10e" kindref="member">SCL_WLC_E_CHANNEL_ADOPTED</ref><sp/>=<sp/>63,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a54308864c1e11d221e3492d0c0a91bf9" kindref="member">SCL_WLC_E_AP_STARTED</ref><sp/>=<sp/>64,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af21c2f5d0711ae83f595a7e1bb90bd83" kindref="member">SCL_WLC_E_DFS_AP_STOP</ref><sp/>=<sp/>65,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a67836b893934f764e4ecc4a96b99034f" kindref="member">SCL_WLC_E_DFS_AP_RESUME</ref><sp/>=<sp/>66,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4a2c6d925045e621e490181dd4e142e5" kindref="member">SCL_WLC_E_WAI_STA_EVENT</ref><sp/>=<sp/>67,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2ec2f525b5047b680ecf812d4ad6c328" kindref="member">SCL_WLC_E_WAI_MSG</ref><sp/>=<sp/>68,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1b39685f4e60c0b2ddacb57c1e164362" kindref="member">SCL_WLC_E_ESCAN_RESULT</ref><sp/>=<sp/>69,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6e6552c59403f7aefc5ed150180a2d46" kindref="member">SCL_WLC_E_ACTION_FRAME_OFF_CHAN_COMPLETE</ref><sp/>=<sp/>70,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>NOTE<sp/>-<sp/>This<sp/>used<sp/>to<sp/>be<sp/>SCL_WLC_E_WAKE_EVENT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aecc7717ce114a45bbfa761385368ac29" kindref="member">SCL_WLC_E_PROBRESP_MSG</ref><sp/>=<sp/>71,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a23ecab2a7de6667a72b2836297a58f9f" kindref="member">SCL_WLC_E_P2P_PROBREQ_MSG</ref><sp/>=<sp/>72,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac55e66bc3156c0f8af512b232e190e72" kindref="member">SCL_WLC_E_DCS_REQUEST</ref><sp/>=<sp/>73,<sp/>SCL_WLC_E_FIFO_CREDIT_MAP<sp/>=<sp/>74,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6f8a08c60d1fd9fc49d13db377b68622" kindref="member">SCL_WLC_E_ACTION_FRAME_RX</ref><sp/>=<sp/>75,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab167b49bf71ad3196f0ea8e6726e1e70" kindref="member">SCL_WLC_E_WAKE_EVENT</ref><sp/>=<sp/>76,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5ec8e41163fe8282a49ca4a99d6a9b3a" kindref="member">SCL_WLC_E_RM_COMPLETE</ref><sp/>=<sp/>77,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4bab12cfddf44ac3ca90cf333b49fa64" kindref="member">SCL_WLC_E_HTSFSYNC</ref><sp/>=<sp/>78,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7384cd87ce947a06a1f6ec019e1af19b" kindref="member">SCL_WLC_E_OVERLAY_REQ</ref><sp/>=<sp/>79,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a62ff260ace8b87796299c180329d6046" kindref="member">SCL_WLC_E_CSA_COMPLETE_IND</ref><sp/>=<sp/>80,<sp/>SCL_WLC_E_EXCESS_PM_WAKE_EVENT<sp/>=<sp/>81,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afd77de06bf2a39f398fc91f9c0ff549f" kindref="member">SCL_WLC_E_PFN_SCAN_NONE</ref><sp/>=<sp/>82,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a162e32a0101bbfcc3534ee962f9dad13" kindref="member">SCL_WLC_E_PFN_SCAN_ALLGONE</ref><sp/>=<sp/>83,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a27fee71167b1ab417e1019cb51edb930" kindref="member">SCL_WLC_E_GTK_PLUMBED</ref><sp/>=<sp/>84,<sp/>SCL_WLC_E_ASSOC_IND_NDIS<sp/>=<sp/>85,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8161f79be7bc3169dbe4b625283f385d" kindref="member">SCL_WLC_E_REASSOC_IND_NDIS</ref><sp/>=<sp/>86,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa1e1eaaa5f9c62be18322b89fccdb482" kindref="member">SCL_WLC_E_ASSOC_REQ_IE</ref><sp/>=<sp/>87,<sp/>SCL_WLC_E_ASSOC_RESP_IE<sp/>=<sp/>88,<sp/>SCL_WLC_E_ASSOC_RECREATED<sp/>=<sp/>89,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a58f9de06400789f74ba59cdc50bdf5da" kindref="member">SCL_WLC_E_ACTION_FRAME_RX_NDIS</ref><sp/>=<sp/>90,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a134a85034cd2deb189df6fc5115b6dfb" kindref="member">SCL_WLC_E_AUTH_REQ</ref><sp/>=<sp/>91,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a83a0f7c3d62bf90d68ace4536e93e951" kindref="member">SCL_WLC_E_TDLS_PEER_EVENT</ref><sp/>=<sp/>92,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afbc86bcb5a565d819f696f195c79b488" kindref="member">SCL_WLC_E_MESH_DHCP_SUCCESS</ref><sp/>=<sp/>92,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1e7ecd058df9a986c2b83139ef72835b" kindref="member">SCL_WLC_E_SPEEDY_RECREATE_FAIL</ref><sp/>=<sp/>93,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a313c2e4f536cfbb845adb6792b76c79a" kindref="member">SCL_WLC_E_NATIVE</ref><sp/>=<sp/>94,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ab40a2f178dfab3d0b29bf841abe1567c" kindref="member">SCL_WLC_E_PKTDELAY_IND</ref><sp/>=<sp/>95,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a8ba3ecac77478c8b582bc2cdc3a01ae4" kindref="member">SCL_WLC_E_AWDL_AW</ref><sp/>=<sp/>96,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a49bd9f9ffae403a681efd075c939c704" kindref="member">SCL_WLC_E_AWDL_ROLE</ref><sp/>=<sp/>97,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504abdced9bd9664be70d875656cc8a4c8b8" kindref="member">SCL_WLC_E_AWDL_EVENT</ref><sp/>=<sp/>98,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5225316e5367cc5f078985e2a343e58b" kindref="member">SCL_WLC_E_NIC_AF_TXS</ref><sp/>=<sp/>99,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a1880f11d58f0473364635c5b94b77f4d" kindref="member">SCL_WLC_E_NAN</ref><sp/>=<sp/>100,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7bed2f5f4ce866050db7c065e7058707" kindref="member">SCL_WLC_E_BEACON_FRAME_RX</ref><sp/>=<sp/>101,<sp/>SCL_WLC_E_SERVICE_FOUND<sp/>=<sp/>102,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6ce325b4e0fac3c3658275c909ec66df" kindref="member">SCL_WLC_E_GAS_FRAGMENT_RX</ref><sp/>=<sp/>103,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2e2bbd7ab502bd446c865b72d5df4b59" kindref="member">SCL_WLC_E_GAS_COMPLETE</ref><sp/>=<sp/>104,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a7445c9c7f6a6337cd4ecf9e57c6c0329" kindref="member">SCL_WLC_E_P2PO_ADD_DEVICE</ref><sp/>=<sp/>105,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a2744eaf5e4968b9ebc35cff06e754d86" kindref="member">SCL_WLC_E_P2PO_DEL_DEVICE</ref><sp/>=<sp/>106,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a4281b8231a2dc5ad92181d8cdacdd0cd" kindref="member">SCL_WLC_E_WNM_STA_SLEEP</ref><sp/>=<sp/>107,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a6725d24501e905cc8a8b25cea986998f" kindref="member">SCL_WLC_E_TXFAIL_THRESH</ref><sp/>=<sp/>108,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a9ecf30c5f2e6674589b968e0d430317b" kindref="member">SCL_WLC_E_PROXD</ref><sp/>=<sp/>109,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504afe10f2db8bc973217665b783a49ffa74" kindref="member">SCL_WLC_E_IBSS_COALESCE</ref><sp/>=<sp/>110,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a81069a7eca971d1d3cb82cb885e068e6" kindref="member">SCL_WLC_E_MESH_PAIRED</ref><sp/>=<sp/>110,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aa84ef24a956d3dd97251d1ae2df20e75" kindref="member">SCL_WLC_E_AWDL_RX_PRB_RESP</ref><sp/>=<sp/>111,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a3f291ca3122754a53bd39bbbb637f500" kindref="member">SCL_WLC_E_AWDL_RX_ACT_FRAME</ref><sp/>=<sp/>112,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac937213d2be6432e76b39e83493694f9" kindref="member">SCL_WLC_E_AWDL_WOWL_NULLPKT</ref><sp/>=<sp/>113,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a34e0ae01a42f0e05e91d922ab0e506dc" kindref="member">SCL_WLC_E_AWDL_PHYCAL_STATUS</ref><sp/>=<sp/>114,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aea1487cc6807e4a3425242bd048dcbf4" kindref="member">SCL_WLC_E_AWDL_OOB_AF_STATUS</ref><sp/>=<sp/>115,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a0fbe1b06fe060602db5de4bc7a3a7bb0" kindref="member">SCL_WLC_E_AWDL_SCAN_STATUS</ref><sp/>=<sp/>116,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a930646bd7c85cae1b237942976c7ba6c" kindref="member">SCL_WLC_E_AWDL_AW_START</ref><sp/>=<sp/>117,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a16623140f7f079fcdbc837eb96568a50" kindref="member">SCL_WLC_E_AWDL_AW_END</ref><sp/>=<sp/>118,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504aec62e3a1c548cefa0970d4197e65dab9" kindref="member">SCL_WLC_E_AWDL_AW_EXT</ref><sp/>=<sp/>119,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a9ed09727d414ae072261e9c40b2e0f2a" kindref="member">SCL_WLC_E_AWDL_PEER_CACHE_CONTROL</ref><sp/>=<sp/>120,<sp/>SCL_WLC_E_CSA_START_IND<sp/>=<sp/>121,<sp/>SCL_WLC_E_CSA_DONE_IND<sp/>=<sp/>122,</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_CSA_FAILURE_IND<sp/>=<sp/>123,<sp/>SCL_WLC_E_CCA_CHAN_QUAL<sp/>=<sp/>124,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ad72be492658b1392352cbd1a8618dbf7" kindref="member">SCL_WLC_E_BSSID</ref><sp/>=<sp/>125,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504a5aba03179fb7661f862df1525d964d7a" kindref="member">SCL_WLC_E_TX_STAT_ERROR</ref><sp/>=<sp/>126,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504adb379db22c3914b7d6478d4b37a53a0e" kindref="member">SCL_WLC_E_BCMC_CREDIT_SUPPORT</ref><sp/>=<sp/>127,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504ac7c831904841156c47e3e6c581d22648" kindref="member">SCL_WLC_E_PSTA_PRIMARY_INTF_IND</ref><sp/>=<sp/>128,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504af7a9ef5c25789133757b1d3ea60d3324" kindref="member">SCL_WLC_E_BT_WIFI_HANDOVER_REQ</ref><sp/>=<sp/>130,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Handover<sp/>Request<sp/>Initiated<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_SPW_TXINHIBIT<sp/>=<sp/>131,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Southpaw<sp/>TxInhibit<sp/>notification<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_FBT_AUTH_REQ_IND<sp/>=<sp/>132,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FBT<sp/>Authentication<sp/>Request<sp/>Indication<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_RSSI_LQM<sp/>=<sp/>133,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enhancement<sp/>addition<sp/>for<sp/>SCL_WLC_E_RSSI<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_PFN_GSCAN_FULL_RESULT<sp/>=<sp/>134,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Full<sp/>probe/beacon<sp/>(IEs<sp/>etc)<sp/>results<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_PFN_SWC<sp/>=<sp/>135,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Significant<sp/>change<sp/>in<sp/>rssi<sp/>of<sp/>bssids<sp/>being<sp/>tracked<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_AUTHORIZED<sp/>=<sp/>136,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a<sp/>STA<sp/>been<sp/>authroized<sp/>for<sp/>traffic<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_PROBREQ_MSG_RX<sp/>=<sp/>137,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>probe<sp/>req<sp/>with<sp/>wl_event_rx_frame_data_t<sp/>header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_PFN_SCAN_COMPLETE<sp/>=<sp/>138,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>PFN<sp/>completed<sp/>scan<sp/>of<sp/>network<sp/>list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_RMC_EVENT<sp/>=<sp/>139,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RMC<sp/>Event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_DPSTA_INTF_IND<sp/>=<sp/>140,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>DPSTA<sp/>interface<sp/>indication<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_RRM<sp/>=<sp/>141,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RRM<sp/>Event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_ULP<sp/>=<sp/>146,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ULP<sp/>entry<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_TKO<sp/>=<sp/>151,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TCP<sp/>Keep<sp/>Alive<sp/>Offload<sp/>Event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_WLC_E_LAST<sp/>=<sp/>152,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>highest<sp/>val<sp/>+<sp/>1<sp/>for<sp/>range<sp/>checking<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}<sp/><ref refid="scl__types_8h_1aef70e7ecee07897e718f9471559e6504" kindref="member">scl_event_num_t</ref>;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ifndef<sp/>INCLUDED_SCL_TYPES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_types.h"/>
+  </compounddef>
+</doxygen>

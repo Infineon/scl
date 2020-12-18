@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="group__communication" kind="group">
+    <compoundname>communication</compoundname>
+    <title>SCL communication API</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__communication_1gaa0e2decd5df1e776b053ddf33e7cd16d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" kindref="member">scl_result_t</ref></type>
+        <definition>scl_result_t scl_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>scl_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the SCL thread and necessary artifacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SCL_SUCCESS on successful initialization or SCL_ERROR otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="91" column="21" declfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" declline="91" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__communication_1ga4cf63cea8e5e196353b80d769b7182ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" kindref="member">scl_result_t</ref></type>
+        <definition>scl_result_t scl_send_data</definition>
+        <argsstring>(int index, char *buffer, uint32_t timeout)</argsstring>
+        <name>scl_send_data</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Sends the SCL data and respective command to Network Processor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the command. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be sent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum time (in ms) to wait for the Network Processor to release IPC channel.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SCL_SUCCESS on successful communication within SCL timeout duration or SCL_ERROR </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="101" column="21" declfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" declline="101" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__communication_1gad01b73140538bb57e28ad911dd62412f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" kindref="member">scl_result_t</ref></type>
+        <definition>scl_result_t scl_end</definition>
+        <argsstring>(void)</argsstring>
+        <name>scl_end</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Terminates the SCL thread and disables the interrupts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SCL_SUCCESS on successful termination of SCL thread and disabling of interrupts or SCL_ERROR on timeout </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="107" column="21" declfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" declline="107" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__communication_1ga690f0ae086500cbc92390cb2c0d0a429" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" kindref="member">scl_result_t</ref></type>
+        <definition>scl_result_t scl_get_nw_parameters</definition>
+        <argsstring>(network_params_t *nw_param)</argsstring>
+        <name>scl_get_nw_parameters</name>
+        <param>
+          <type><ref refid="structnetwork__params__t" kindref="compound">network_params_t</ref> *</type>
+          <declname>nw_param</declname>
+        </param>
+        <briefdescription>
+<para>Gets the network parameters like IP Address, Netmask, and Gateway from Network Processor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nw_param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>structure pointer of type <emphasis><ref refid="structnetwork__params__t" kindref="compound">network_params_t</ref></emphasis> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SCL_SUCCESS on successful communication or SCL_ERROR </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="115" column="21" declfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" declline="115" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__communication_1gab1e0f13141ff3bac695f5d274cbd8457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scl_process_events_from_np</definition>
+        <argsstring>(const scl_event_header_t *event_header, const uint8_t *event_data, void *handler_user_data)</argsstring>
+        <name>scl_process_events_from_np</name>
+        <param>
+          <type>const scl_event_header_t *</type>
+          <declname>event_header</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>event_data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>handler_user_data</declname>
+        </param>
+        <briefdescription>
+<para>Callback function that processes events from NP and sends it to the registered callbacks on CP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>structure pointer of type <emphasis>scl_event_header_t</emphasis> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>event data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler_user_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>semaphore data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="125" column="13" declfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" declline="125" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>APIs for communicating with Network Processor </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

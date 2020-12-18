@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="structnetwork__params__t" kind="struct" language="C++" prot="public">
+    <compoundname>network_params_t</compoundname>
+    <includes local="no">scl_ipc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnetwork__params__t_1ac5432aed416c5c95736350828bb7b64d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ip_address[PARAM_LEN]</definition>
+        <argsstring>[PARAM_LEN]</argsstring>
+        <name>ip_address</name>
+        <briefdescription>
+<para>IP address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="74" column="10" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnetwork__params__t_1abe8b36c35606ee162f7e876cd4d93b7d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char netmask[PARAM_LEN]</definition>
+        <argsstring>[PARAM_LEN]</argsstring>
+        <name>netmask</name>
+        <briefdescription>
+<para>Netmask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="75" column="10" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnetwork__params__t_1a3cd34dd09ff5b61fd63a489a7cf8ae7c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char gateway[PARAM_LEN]</definition>
+        <argsstring>[PARAM_LEN]</argsstring>
+        <name>gateway</name>
+        <briefdescription>
+<para>Gateway. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="76" column="10" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnetwork__params__t_1a5ab54995772ff96d303a45287001664f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int connection_status</definition>
+        <argsstring></argsstring>
+        <name>connection_status</name>
+        <briefdescription>
+<para>Connection status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="77" column="10" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Network parameters structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" line="72" column="29" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_ipc.h" bodystart="72" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structnetwork__params__t_1a5ab54995772ff96d303a45287001664f" prot="public" virt="non-virtual"><scope>network_params_t</scope><name>connection_status</name></member>
+      <member refid="structnetwork__params__t_1a3cd34dd09ff5b61fd63a489a7cf8ae7c" prot="public" virt="non-virtual"><scope>network_params_t</scope><name>gateway</name></member>
+      <member refid="structnetwork__params__t_1ac5432aed416c5c95736350828bb7b64d" prot="public" virt="non-virtual"><scope>network_params_t</scope><name>ip_address</name></member>
+      <member refid="structnetwork__params__t_1abe8b36c35606ee162f7e876cd4d93b7d" prot="public" virt="non-virtual"><scope>network_params_t</scope><name>netmask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

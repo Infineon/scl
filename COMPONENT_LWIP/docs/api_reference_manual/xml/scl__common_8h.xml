@@ -1,0 +1,1926 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="scl__common_8h" kind="file" language="C++">
+    <compoundname>scl_common.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">cy_result.h</includes>
+    <includedby refid="scl__types_8h" local="yes">scl_types.h</includedby>
+    <includedby refid="scl__buffer__api_8h" local="yes">scl_buffer_api.h</includedby>
+    <includedby refid="scl__ipc_8h" local="yes">scl_ipc.h</includedby>
+    <includedby refid="scl__wifi__api_8h" local="yes">scl_wifi_api.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>cy_result.h</label>
+      </node>
+      <node id="1">
+        <label>scl_common.h</label>
+        <link refid="scl__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>scl_wifi_api.h</label>
+        <link refid="scl__wifi__api_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>scl_ipc.h</label>
+        <link refid="scl__ipc_8h"/>
+      </node>
+      <node id="2">
+        <label>scl_types.h</label>
+        <link refid="scl__types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scl_buffer_api.h</label>
+        <link refid="scl__buffer__api_8h"/>
+      </node>
+      <node id="1">
+        <label>scl_common.h</label>
+        <link refid="scl__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structscl__mac__t" prot="public">scl_mac_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="scl__common_8h_1a39c911a3ca34cd81bdd64bd96b948b6a" prot="public" static="no">
+        <name>SCL_LOG_ENABLE</name>
+        <initializer>false</initializer>
+        <briefdescription>
+<para>Flag to enable SCL debug logs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="38" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1afe0916a4a7aa61aec705c0eea7070ec3" prot="public" static="no">
+        <name>SCL_LOG</name>
+        <param><defname>x</defname></param>
+        <initializer>if (<ref refid="scl__common_8h_1a39c911a3ca34cd81bdd64bd96b948b6a" kindref="member">SCL_LOG_ENABLE</ref>) \
+                                    { printf x; }</initializer>
+        <briefdescription>
+<para>SCL log interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="39" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a28f8bd77cd7d514f350a9206bbd1cd28" prot="public" static="no">
+        <name>CHECK_BUFFER_NULL</name>
+        <param><defname>buf</defname></param>
+        <initializer>if (buf == NULL)\
+                                    { <ref refid="scl__common_8h_1afe0916a4a7aa61aec705c0eea7070ec3" kindref="member">SCL_LOG</ref>((&quot;Buffer pointer is null\n&quot;)); \
+                                      return <ref refid="scl__common_8h_1ae6acee12ba2f2c10646820a5318f6bd6" kindref="member">SCL_BADARG</ref>; }</initializer>
+        <briefdescription>
+<para>Helper macro to check if the input buffer pointer is null. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="41" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1affac105f255c993640a9b157010b3dad" prot="public" static="no">
+        <name>MODULE_BASE_CODE</name>
+        <initializer>(0x0080U)</initializer>
+        <briefdescription>
+<para>Base code for the SCL error status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="45" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aa4b42e44356c70b6978ac8bfbba52d5e" prot="public" static="no">
+        <name>SCL_RESULT_TYPE</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>SCL Result type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="46" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" prot="public" static="no">
+        <name>SCL_RESULT_CREATE</name>
+        <param><defname>x</defname></param>
+        <initializer>CY_RSLT_CREATE(<ref refid="scl__common_8h_1aa4b42e44356c70b6978ac8bfbba52d5e" kindref="member">SCL_RESULT_TYPE</ref>, <ref refid="scl__common_8h_1affac105f255c993640a9b157010b3dad" kindref="member">MODULE_BASE_CODE</ref>, (x) )</initializer>
+        <briefdescription>
+<para>Create a result value from the specified type, module, and result code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="53" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1afea4b7a41665fefdc814c971d1b0e893" prot="public" static="no">
+        <name>SCL_SUCCESS</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>IPC success. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="55" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1afcef196f4c8d543377091c20a821882a" prot="public" static="no">
+        <name>SCL_ERROR</name>
+        <initializer>(100)</initializer>
+        <briefdescription>
+<para>IPC error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="56" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae57e1328e4bd1d8ec34471b6088f7881" prot="public" static="no">
+        <name>SCL_PENDING</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1)</initializer>
+        <briefdescription>
+<para>IPC Pending. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="57" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a4708918902cf76addf76a04f59ba47e8" prot="public" static="no">
+        <name>SCL_TIMEOUT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(2)</initializer>
+        <briefdescription>
+<para>Timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="58" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae6acee12ba2f2c10646820a5318f6bd6" prot="public" static="no">
+        <name>SCL_BADARG</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(5)</initializer>
+        <briefdescription>
+<para>Bad Arguments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="59" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a622ce501adf697709e64a1d536af64b0" prot="public" static="no">
+        <name>SCL_UNFINISHED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(10)</initializer>
+        <briefdescription>
+<para>Operation not finished yet (maybe aborted) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="60" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a92ca5f463e1c2a83310e5df81491e0d4" prot="public" static="no">
+        <name>SCL_PARTIAL_RESULTS</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1003)</initializer>
+        <briefdescription>
+<para>Partial results. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="61" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a3b229cb9def5d820651c47911b64cfb8" prot="public" static="no">
+        <name>SCL_INVALID_KEY</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1004)</initializer>
+        <briefdescription>
+<para>Invalid key. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="62" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a27f8ccfef1cfdfd307d64a5325498938" prot="public" static="no">
+        <name>SCL_DOES_NOT_EXIST</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1005)</initializer>
+        <briefdescription>
+<para>Does not exist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="63" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a6ad3b22c1e2869653dd5ecd612fc4673" prot="public" static="no">
+        <name>SCL_NOT_AUTHENTICATED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1006)</initializer>
+        <briefdescription>
+<para>Not authenticated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="64" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a13c2a01881f8198c433e37c000befc39" prot="public" static="no">
+        <name>SCL_NOT_KEYED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1007)</initializer>
+        <briefdescription>
+<para>Not keyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="65" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1acb9d8da07a1ebb8b750405d20d44c0ca" prot="public" static="no">
+        <name>SCL_IOCTL_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1008)</initializer>
+        <briefdescription>
+<para>IOCTL fail. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="66" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ab9d5cb581d942c047b392dc7c965fd88" prot="public" static="no">
+        <name>SCL_BUFFER_UNAVAILABLE_TEMPORARY</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1009)</initializer>
+        <briefdescription>
+<para>Buffer unavailable temporarily. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="67" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1abc10ed772792a39e89980135b9b831f9" prot="public" static="no">
+        <name>SCL_BUFFER_UNAVAILABLE_PERMANENT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1010)</initializer>
+        <briefdescription>
+<para>Buffer unavailable permanently. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="68" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a147164e3c59553e9dd10006b2177cb7e" prot="public" static="no">
+        <name>SCL_CONNECTION_LOST</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1012)</initializer>
+        <briefdescription>
+<para>Connection lost. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="69" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae93602b58610afc8529b2178e3e2c5af" prot="public" static="no">
+        <name>SCL_OUT_OF_EVENT_HANDLER_SPACE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1013)</initializer>
+        <briefdescription>
+<para>Cannot add extra event handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="70" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a77575fc99109a3953ef1e6c4f7c9be48" prot="public" static="no">
+        <name>SCL_SEMAPHORE_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1014)</initializer>
+        <briefdescription>
+<para>Error manipulating a semaphore. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="71" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1afc83c8f84b293410b50fc799ef3e50fc" prot="public" static="no">
+        <name>SCL_FLOW_CONTROLLED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1015)</initializer>
+        <briefdescription>
+<para>Packet retrieval cancelled due to flow control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="72" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a41d7fa4a6b22c656ec08f2408c5b493a" prot="public" static="no">
+        <name>SCL_NO_CREDITS</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1016)</initializer>
+        <briefdescription>
+<para>Packet retrieval cancelled due to lack of bus credits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="73" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a63b966b4f32b5a30b33ad391214fbe52" prot="public" static="no">
+        <name>SCL_NO_PACKET_TO_SEND</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1017)</initializer>
+        <briefdescription>
+<para>Packet retrieval cancelled due to no pending packets. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="74" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae5012dfc795a129a3f64714525aa1e02" prot="public" static="no">
+        <name>SCL_CORE_CLOCK_NOT_ENABLED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1018)</initializer>
+        <briefdescription>
+<para>Core disabled due to no clock. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="75" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a46d67d50f44ebbe2d2b516b58f8b20ae" prot="public" static="no">
+        <name>SCL_CORE_IN_RESET</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1019)</initializer>
+        <briefdescription>
+<para>Core disabled - in reset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="76" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a322e94949e22bcd0a7543b37d6f7db9e" prot="public" static="no">
+        <name>SCL_UNSUPPORTED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1020)</initializer>
+        <briefdescription>
+<para>Unsupported function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="77" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a788952b9f0e276d8df9ee3de610b05b2" prot="public" static="no">
+        <name>SCL_BUS_WRITE_REGISTER_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1021)</initializer>
+        <briefdescription>
+<para>Error writing to WLAN register. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="78" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a592ef2a003492d6e82e3f7bca65ca296" prot="public" static="no">
+        <name>SCL_SDIO_BUS_UP_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1022)</initializer>
+        <briefdescription>
+<para>SDIO bus failed to come up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="79" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a3b49eceb733774d128be1a246f3c520e" prot="public" static="no">
+        <name>SCL_JOIN_IN_PROGRESS</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1023)</initializer>
+        <briefdescription>
+<para>Join not finished yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="80" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a3e135af2999d2a2912c87330b1c88681" prot="public" static="no">
+        <name>SCL_NETWORK_NOT_FOUND</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1024)</initializer>
+        <briefdescription>
+<para>Specified network was not found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="81" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a5897b37122798b4a186e9c7a4c1869d9" prot="public" static="no">
+        <name>SCL_INVALID_JOIN_STATUS</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1025)</initializer>
+        <briefdescription>
+<para>Join status error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="82" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a2eaf58b9ca04ab501de5de179343d064" prot="public" static="no">
+        <name>SCL_UNKNOWN_INTERFACE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1026)</initializer>
+        <briefdescription>
+<para>Unknown interface specified. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="83" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ac8be2d2070d1112b1ae8c6ee457dacb0" prot="public" static="no">
+        <name>SCL_SDIO_RX_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1027)</initializer>
+        <briefdescription>
+<para>Error during SDIO receive. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="84" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a8545cf3396f9472f70baec87b26ca975" prot="public" static="no">
+        <name>SCL_HWTAG_MISMATCH</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1028)</initializer>
+        <briefdescription>
+<para>Hardware tag header corrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="85" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a3afdd559df35bb55e420581884284587" prot="public" static="no">
+        <name>SCL_RX_BUFFER_ALLOC_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1029)</initializer>
+        <briefdescription>
+<para>Failed to allocate a buffer to receive into. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="86" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a82489c6172fc349133b0faf86776f2cb" prot="public" static="no">
+        <name>SCL_BUS_READ_REGISTER_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1030)</initializer>
+        <briefdescription>
+<para>Error reading a bus hardware register. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="87" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae68f734c5fbed881e2ec0c001867232a" prot="public" static="no">
+        <name>SCL_THREAD_CREATE_FAILED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1031)</initializer>
+        <briefdescription>
+<para>Failed to create a new thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="88" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a700f846b3efab9ccbda3b2663c407603" prot="public" static="no">
+        <name>SCL_QUEUE_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1032)</initializer>
+        <briefdescription>
+<para>Error manipulating a queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="89" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aacd2dd6dadbf4220d362decd3ec4cc80" prot="public" static="no">
+        <name>SCL_BUFFER_POINTER_MOVE_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1033)</initializer>
+        <briefdescription>
+<para>Error moving the current pointer of a packet buffer <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="90" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a5882aa767bfe88aaad24512afa97a861" prot="public" static="no">
+        <name>SCL_BUFFER_SIZE_SET_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1034)</initializer>
+        <briefdescription>
+<para>Error setting size of packet buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="91" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a81ae876334eab64ba3f3c52b14eae291" prot="public" static="no">
+        <name>SCL_THREAD_STACK_NULL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1035)</initializer>
+        <briefdescription>
+<para>Null stack pointer passed when non null was required. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="92" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a4304ef6c5c45329d188cfe066bf02d17" prot="public" static="no">
+        <name>SCL_THREAD_DELETE_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1036)</initializer>
+        <briefdescription>
+<para>Error deleting a thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="93" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a6c9a25e621bcf2c49b2eea0273382534" prot="public" static="no">
+        <name>SCL_SLEEP_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1037)</initializer>
+        <briefdescription>
+<para>Error sleeping a thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="94" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1afe96ddd63a5e911ab9734e431b010db7" prot="public" static="no">
+        <name>SCL_BUFFER_ALLOC_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1038)</initializer>
+        <briefdescription>
+<para>Failed to allocate a packet buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="95" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a2339dba8b136ea2d0eb526892ef6822e" prot="public" static="no">
+        <name>SCL_NO_PACKET_TO_RECEIVE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1039)</initializer>
+        <briefdescription>
+<para>No Packets waiting to be received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="96" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a98026fc9756213cb3717749fb749f7cd" prot="public" static="no">
+        <name>SCL_INTERFACE_NOT_UP</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1040)</initializer>
+        <briefdescription>
+<para>Requested interface is not active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="97" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1adf604df3c574c0ba6a87300b72a3ba30" prot="public" static="no">
+        <name>SCL_DELAY_TOO_LONG</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1041)</initializer>
+        <briefdescription>
+<para>Requested delay is too long. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="98" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ad521e106005c683ab61d9615b0969dbb" prot="public" static="no">
+        <name>SCL_INVALID_DUTY_CYCLE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1042)</initializer>
+        <briefdescription>
+<para>Duty cycle is outside limit 0 to 100. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="99" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aad172962be0f5647656e31f8203b69b4" prot="public" static="no">
+        <name>SCL_PMK_WRONG_LENGTH</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1043)</initializer>
+        <briefdescription>
+<para>Returned pmk was the wrong length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="100" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ad10521dcba2930b53b3ba874cca55651" prot="public" static="no">
+        <name>SCL_UNKNOWN_SECURITY_TYPE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1044)</initializer>
+        <briefdescription>
+<para>AP security type was unknown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="101" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a67920030a5d135b0caa6dca8cd71e495" prot="public" static="no">
+        <name>SCL_WEP_NOT_ALLOWED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1045)</initializer>
+        <briefdescription>
+<para>AP not allowed to use WEP - it is not secure - use Open instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="102" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aa2fb9dcf5bb1ded56653f15651c09e3b" prot="public" static="no">
+        <name>SCL_WPA_KEYLEN_BAD</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1046)</initializer>
+        <briefdescription>
+<para>WPA / WPA2 key length must be between 8 &amp; 64 bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="103" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a94ee0fc58fef7785b8f62e3c9178a448" prot="public" static="no">
+        <name>SCL_FILTER_NOT_FOUND</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1047)</initializer>
+        <briefdescription>
+<para>Specified filter id not found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="104" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a9b9f49b2803ff123f9a4b72a50295bf1" prot="public" static="no">
+        <name>SCL_SPI_ID_READ_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1048)</initializer>
+        <briefdescription>
+<para>Failed to read 0xfeedbead SPI id from chip. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="105" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a9125da1d1d934636999907d5d709ce0e" prot="public" static="no">
+        <name>SCL_SPI_SIZE_MISMATCH</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1049)</initializer>
+        <briefdescription>
+<para>Mismatch in sizes between SPI header and SDPCM header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="106" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a694c381b90996fe878150bb617904292" prot="public" static="no">
+        <name>SCL_ADDRESS_ALREADY_REGISTERED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1050)</initializer>
+        <briefdescription>
+<para>Attempt to register a multicast address twice. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="107" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a961738b00ab6cc3fd0a895684b7d7bc3" prot="public" static="no">
+        <name>SCL_SDIO_RETRIES_EXCEEDED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1051)</initializer>
+        <briefdescription>
+<para>SDIO transfer failed too many times. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="108" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a2d325860a6c6f788f5c64894dd890839" prot="public" static="no">
+        <name>SCL_NULL_PTR_ARG</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1052)</initializer>
+        <briefdescription>
+<para>Null Pointer argument passed to function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="109" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a266b3500ad62ffa18e1069f5f183bb8f" prot="public" static="no">
+        <name>SCL_THREAD_FINISH_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1053)</initializer>
+        <briefdescription>
+<para>Error deleting a thread. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="110" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a90f5a1884be7a65b04cf1c8af0721ad0" prot="public" static="no">
+        <name>SCL_WAIT_ABORTED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1054)</initializer>
+        <briefdescription>
+<para>Semaphore/mutex wait has been aborted. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="111" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1af4097c312e5ee146c0519ae2162b7b55" prot="public" static="no">
+        <name>SCL_SET_BLOCK_ACK_WINDOW_FAIL</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1055)</initializer>
+        <briefdescription>
+<para>Failed to set block ack window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="112" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae13e62ab3ec077effdf3bc66ae626e74" prot="public" static="no">
+        <name>SCL_DELAY_TOO_SHORT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1056)</initializer>
+        <briefdescription>
+<para>Requested delay is too short. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="113" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ad6140ba3485a938ca3f65870468d9465" prot="public" static="no">
+        <name>SCL_INVALID_INTERFACE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1057)</initializer>
+        <briefdescription>
+<para>Invalid interface provided. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="114" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a228b544da9140f31627089f0ab5b7320" prot="public" static="no">
+        <name>SCL_WEP_KEYLEN_BAD</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1058)</initializer>
+        <briefdescription>
+<para>WEP / WEP_SHARED key length must be 5 or 13 bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="115" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a717fe3a815914d29e13080e72d44502c" prot="public" static="no">
+        <name>SCL_HANDLER_ALREADY_REGISTERED</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1059)</initializer>
+        <briefdescription>
+<para>EAPOL handler already registered. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="116" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aa3b57f3b3f84f6414fbc49955b52323b" prot="public" static="no">
+        <name>SCL_AP_ALREADY_UP</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1060)</initializer>
+        <briefdescription>
+<para>Soft AP or P2P group owner already up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="117" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a4e9f540f4c64973328c2b56b1bdf0044" prot="public" static="no">
+        <name>SCL_EAPOL_KEY_PACKET_M1_TIMEOUT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1061)</initializer>
+        <briefdescription>
+<para>Timeout occurred while waiting for EAPOL packet M1 from AP. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="118" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a5484a20a77467db4f145b2eb8578c910" prot="public" static="no">
+        <name>SCL_EAPOL_KEY_PACKET_M3_TIMEOUT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1062)</initializer>
+        <briefdescription>
+<para>Timeout occurred while waiting for EAPOL packet M3 from AP which may indicate incorrect WPA2/WPA passphrase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="119" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a34c3c4d9dbe5515f50529776d61fa2f0" prot="public" static="no">
+        <name>SCL_EAPOL_KEY_PACKET_G1_TIMEOUT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1063)</initializer>
+        <briefdescription>
+<para>Timeout occurred while waiting for EAPOL packet G1 from AP. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="120" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a168b46abdc05efad43c0a11338a7bab2" prot="public" static="no">
+        <name>SCL_EAPOL_KEY_FAILURE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1064)</initializer>
+        <briefdescription>
+<para>Unknown failure occurred during the EAPOL key handshake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="121" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ae5ddfcf29e6075b791683f2edde7a33b" prot="public" static="no">
+        <name>SCL_MALLOC_FAILURE</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1065)</initializer>
+        <briefdescription>
+<para>Memory allocation failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="122" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a4c4edaa8649ebd374238c479c1c6d787" prot="public" static="no">
+        <name>SCL_ACCESS_POINT_NOT_FOUND</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1066)</initializer>
+        <briefdescription>
+<para>Access point not found. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="123" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a23d7912477b9d69ebcccd788dc0d72cf" prot="public" static="no">
+        <name>SCL_RTOS_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1067)</initializer>
+        <briefdescription>
+<para>RTOS operation failed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="124" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a7fc0f4f4394fc5467e87d3ba3305d484" prot="public" static="no">
+        <name>SCL_CLM_BLOB_DLOAD_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1068)</initializer>
+        <briefdescription>
+<para>CLM blob download failed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="125" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ab0a878abdbe284a38fdc85536016a07d" prot="public" static="no">
+        <name>SCL_HAL_ERROR</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1069)</initializer>
+        <briefdescription>
+<para>SCL HAL Error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="126" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1ab2842cd2bb9d0d2f9b881a072f932298" prot="public" static="no">
+        <name>SCL_RTOS_STATIC_MEM_LIMIT</name>
+        <initializer><ref refid="scl__common_8h_1ac2ae61090a6b87a10cba31d3a7ab7dbc" kindref="member">SCL_RESULT_CREATE</ref>(1070)</initializer>
+        <briefdescription>
+<para>Exceeding the RTOS static objects memory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="127" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a50f830e25a5ac6d7d0e3eb8d23e90943" prot="public" static="no">
+        <name>BDC_HEADER_WITH_PAD</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para>BDC Header with padding 4 + 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="131" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a559655385d80ca97754fafa29ac87717" prot="public" static="no">
+        <name>BDC_HEADER_OFFSET_TO_DATA</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>From bdc header, Ethernet data starts after an offset of (bdc_header-&gt;data_offset&lt;&lt;2). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is variable, but usually 4. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="136" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aa4651e54d79668879d137dfda561c7af" prot="public" static="no">
+        <name>SCL_PAYLOAD_MTU</name>
+        <initializer>(1500)</initializer>
+        <briefdescription>
+<para>The maximum size, in bytes, of the data part of an Ethernet frame. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="138" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aaf73ac170e07969ed067a6cd5088044f" prot="public" static="no">
+        <name>SDPCM_HEADER</name>
+        <initializer>(8 + 4)</initializer>
+        <briefdescription>
+<para>SDPCM SW header + Frame tag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="140" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1aab3fad8b23f2db6d6c985134359bec0d" prot="public" static="no">
+        <name>MAX_BUS_HEADER_SIZE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>Max bus header size for all bus types (sdio/spi) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="142" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a9b159bb86ca28f2200f30661441f232e" prot="public" static="no">
+        <name>BUFFER_OVERHEAD</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>Buffer overhead, sizeof(void *) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="144" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a86f46ec4ae9fbf1242eb43955b57922b" prot="public" static="no">
+        <name>SCL_LINK_HEADER</name>
+        <initializer>(<ref refid="scl__common_8h_1a50f830e25a5ac6d7d0e3eb8d23e90943" kindref="member">BDC_HEADER_WITH_PAD</ref> + <ref refid="scl__common_8h_1a559655385d80ca97754fafa29ac87717" kindref="member">BDC_HEADER_OFFSET_TO_DATA</ref> + \
+                         <ref refid="scl__common_8h_1aaf73ac170e07969ed067a6cd5088044f" kindref="member">SDPCM_HEADER</ref> + <ref refid="scl__common_8h_1aab3fad8b23f2db6d6c985134359bec0d" kindref="member">MAX_BUS_HEADER_SIZE</ref> + <ref refid="scl__common_8h_1a9b159bb86ca28f2200f30661441f232e" kindref="member">BUFFER_OVERHEAD</ref>)</initializer>
+        <briefdescription>
+<para>The maximum space in bytes required for headers in front of the Ethernet header. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>6 + (8 + 4) + 4 + 4 + 4 = 30 bytes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="150" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a59fd39f6b23dfcf261fc9413c919840d" prot="public" static="no">
+        <name>SCL_ETHERNET_SIZE</name>
+        <initializer>(14)</initializer>
+        <briefdescription>
+<para>The size of an Ethernet header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="156" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a80e258e7a6efe1a41c52d9ca665e6bef" prot="public" static="no">
+        <name>SCL_PHYSICAL_HEADER</name>
+        <initializer>(<ref refid="scl__common_8h_1a86f46ec4ae9fbf1242eb43955b57922b" kindref="member">SCL_LINK_HEADER</ref> + <ref refid="scl__common_8h_1a59fd39f6b23dfcf261fc9413c919840d" kindref="member">SCL_ETHERNET_SIZE</ref>)</initializer>
+        <briefdescription>
+<para>The size in bytes of the Link layer header i.e. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>the whd specific headers and the Ethernet header </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="161" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scl__common_8h_1a61a890767f865802f5f7a035afda4c6c" prot="public" static="no">
+        <name>SCL_LINK_MTU</name>
+        <initializer>(<ref refid="scl__common_8h_1aa4651e54d79668879d137dfda561c7af" kindref="member">SCL_PAYLOAD_MTU</ref> + <ref refid="scl__common_8h_1a80e258e7a6efe1a41c52d9ca665e6bef" kindref="member">SCL_PHYSICAL_HEADER</ref>)</initializer>
+        <briefdescription>
+<para>The maximum size in bytes of a packet used within whd. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Pool should be atleast of this size. Usually buffer pools needs implementation specific headers like pbuf header etc, that should be taken into account along with this during buffer pool creation. Also buffer pools needs alignment with cache size of the platform for better performance </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="170" column="9" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_bool_t</name>
+        <enumvalue id="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812ae2b5f551535df41fa57331942b7050d0" prot="public">
+          <name>SCL_FALSE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Boolean False. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812a25c4ff8d5a12ed99b5d6f0dc175ea47d" prot="public">
+          <name>SCL_TRUE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Boolean True. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Typedef for SCL boolean flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="192" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__common_8h_1a491a0d6079223bcc144618147f16b263" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_interface_role_t</name>
+        <enumvalue id="scl__common_8h_1a491a0d6079223bcc144618147f16b263a9a76612f324aa731465b8fcef1085533" prot="public">
+          <name>SCL_INVALID_ROLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Invalid role. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a491a0d6079223bcc144618147f16b263a8f8f3eacf8c09454172a590657d78afc" prot="public">
+          <name>SCL_STA_ROLE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>STA or Client Interface. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a491a0d6079223bcc144618147f16b263a676bde82f54e54e5292eb421cb3e276d" prot="public">
+          <name>SCL_AP_ROLE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>softAP Interface </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a491a0d6079223bcc144618147f16b263a586d733a3fb6470ef16a56dd4942da40" prot="public">
+          <name>SCL_P2P_ROLE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>P2P Interface. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Typedef for SCL interface roles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="200" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="200" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_ipc_rx_t</name>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a1ef23948fa9e7e7fac502b8eb189ea47" prot="public">
+          <name>SCL_RX_DATA</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Received buffer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8ad41fc8f197fa39f802e1626e8a9990e2" prot="public">
+          <name>SCL_RX_TEST_MSG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Test message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a814357835155c8c6edfb25056e992351" prot="public">
+          <name>SCL_RX_GET_BUFFER</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Get the buffer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a284dec35e181230494fdbb3e8db87074" prot="public">
+          <name>SCL_RX_GET_CONNECTION_STATUS</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Get the connection status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a63bfd294e077ab2ac1c9f67af47f0825" prot="public">
+          <name>SCL_RX_SCAN_STATUS</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Get the scan status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8abd1b1ece53a2a2c6a85851ec16fd510b" prot="public">
+          <name>SCL_RX_EVENT_CALLBACK</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Get the wifi event callback. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Typedef for SCL IPC receive index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="210" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_ipc_tx_t</name>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a58efee8e7e8769d8685fc1b6567ed911" prot="public">
+          <name>SCL_TX_TEST_MSG</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Test Message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a8578fe2e7e153cbb90238ddab4578472" prot="public">
+          <name>SCL_TX_WIFI_INIT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Initialize Wi-Fi. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46affbde7bce68d8585e5dc6f811e534aec" prot="public">
+          <name>SCL_TX_CONFIG_PARAMETERS</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Configuration parameters. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46aa83a436dbdb4c3f2a0f30cb007db706a" prot="public">
+          <name>SCL_TX_GET_MAC</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Get MAC address. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46af78db32b364393f00bdfa8532851ffd0" prot="public">
+          <name>SCL_TX_REGISTER_MULTICAST_ADDRESS</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Register multicast address. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46affc21552e23ab5fb0f3467063a01cc02" prot="public">
+          <name>SCL_TX_SEND_OUT</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Transmit buffer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a8b0a03e5769e80b5ac4bfece90968f7c" prot="public">
+          <name>SCL_TX_TRANSCEIVE_READY</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Wi-Fi transmit/receive ready. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab59880910176cc776f5b44520068bb9c" prot="public">
+          <name>SCL_TX_WIFI_ON</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Wi-Fi on. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a88fe5a393e75e5c10f9f18eaeba1cd5a" prot="public">
+          <name>SCL_TX_WIFI_SET_UP</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Wi-Fi setup. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46aeba990e60a370115fddfab01fb80efbc" prot="public">
+          <name>SCL_TX_WIFI_NW_PARAM</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>Get network parameters. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ac52dd1ad608863e2561bd91c2cc76dfc" prot="public">
+          <name>SCL_TX_WIFI_GET_RSSI</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Get RSSI. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a9cb54f84da32c6a983adc1f96890ce4b" prot="public">
+          <name>SCL_TX_WIFI_GET_BSSID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>Get BSSID. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a234e28ed2e4ef5b47b7dec4315b87dc5" prot="public">
+          <name>SCL_TX_CONNECT</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para>Wi-Fi connect. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a404a155243899240e4066042d05f40bb" prot="public">
+          <name>SCL_TX_DISCONNECT</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para>Wi-Fi disconnect. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a1833ff3bb744ded966d7e303f661d584" prot="public">
+          <name>SCL_TX_CONNECTION_STATUS</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para>Transmit connection status. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab469ff0c31036aedc93e0e19f3acc749" prot="public">
+          <name>SCL_TX_SCL_VERSION_NUMBER</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para>Transmit SCL version number. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a819078a6ac44ea3c25516668db264967" prot="public">
+          <name>SCL_TX_SCAN</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para>Wi-Fi scan. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a0649cf7412376be99526a5cb9aee8460" prot="public">
+          <name>SCL_TX_GET_BSS_INFO</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para>WLC BSS Info. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a6352d889000eb6508f11d4bd7cf464d6" prot="public">
+          <name>SCL_TX_SET_IOCTL_VALUE</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para>Set WHD IOCTL Value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a12f3edbd6559174029d270339a125c33" prot="public">
+          <name>SCL_TX_WIFI_JOIN</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para>Join the Wi-Fi network. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab78424ac3b707a394fafb78b94356001" prot="public">
+          <name>SCL_TX_SET_EVENT_HANDLER</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para>Set the event handler. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Typedef for SCL IPC transmit index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="222" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="222" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_nsapi_connection_status_t</name>
+        <enumvalue id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8afeea1368946d765d9881fdafb755a5e2" prot="public">
+          <name>SCL_NSAPI_STATUS_LOCAL_UP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>local IP address set </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a7da44a711759e8ac993eee1fddf0314f" prot="public">
+          <name>SCL_NSAPI_STATUS_GLOBAL_UP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>global IP address set </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a1a88a3920e882f424f2efc4c803ff009" prot="public">
+          <name>SCL_NSAPI_STATUS_DISCONNECTED</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>no connection to network </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a7cecd016ce40d4ee2687374bc168ed5e" prot="public">
+          <name>SCL_NSAPI_STATUS_CONNECTING</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>connecting to network </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a6ba696e455fee55dee4c34d3b106ec79" prot="public">
+          <name>SCL_NSAPI_STATUS_ERROR_UNSUPPORTED</name>
+          <initializer>= 9999</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum of connection status types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The connection status specifies if the device is connected to WiFi or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="258" column="41" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="258" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="enum" id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>scl_nsapi_security_t</name>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a9eac5dc17b5a2002167ec6d315f46bc8" prot="public">
+          <name>SCL_NSAPI_SECURITY_NONE</name>
+          <initializer>= 0x0</initializer>
+          <briefdescription>
+<para>open access point </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a2dcd7dd88cc28fffb75f39d507dc7422" prot="public">
+          <name>SCL_NSAPI_SECURITY_WEP</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+<para>phrase conforms to WEP </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3aefe0793e05e344bd7a1800af56495b94" prot="public">
+          <name>SCL_NSAPI_SECURITY_WPA</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+<para>phrase conforms to WPA </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a3ce72390c748d46213d2f955c3d1d388" prot="public">
+          <name>SCL_NSAPI_SECURITY_WPA2</name>
+          <initializer>= 0x3</initializer>
+          <briefdescription>
+<para>phrase conforms to WPA2 </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a5877b5e0ff37391a92c4db37eb00cbe3" prot="public">
+          <name>SCL_NSAPI_SECURITY_WPA_WPA2</name>
+          <initializer>= 0x4</initializer>
+          <briefdescription>
+<para>phrase conforms to WPA/WPA2 </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a842bf987118141ea20f5250733bf1708" prot="public">
+          <name>SCL_NSAPI_SECURITY_PAP</name>
+          <initializer>= 0x5</initializer>
+          <briefdescription>
+<para>phrase conforms to PPP authentication context </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3acef574147829bf2567cec2f9f4564bf0" prot="public">
+          <name>SCL_NSAPI_SECURITY_CHAP</name>
+          <initializer>= 0x6</initializer>
+          <briefdescription>
+<para>phrase conforms to PPP authentication context </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a19bca4c0656a4b89382fc265218e6228" prot="public">
+          <name>SCL_NSAPI_SECURITY_EAP_TLS</name>
+          <initializer>= 0x7</initializer>
+          <briefdescription>
+<para>phrase conforms to EAP-TLS </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a6df810e80cece34d26b8b2d717420dc1" prot="public">
+          <name>SCL_NSAPI_SECURITY_PEAP</name>
+          <initializer>= 0x8</initializer>
+          <briefdescription>
+<para>phrase conforms to PEAP </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3ab35cac5ce315530ba060c28b2fb7e44b" prot="public">
+          <name>SCL_NSAPI_SECURITY_WPA2_ENT</name>
+          <initializer>= 0x9</initializer>
+          <briefdescription>
+<para>phrase conforms to WPA2-AES and WPA-TKIP with enterprise security </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3aca972659886e5b8a901041f5154fcc93" prot="public">
+          <name>SCL_NSAPI_SECURITY_UNKNOWN</name>
+          <initializer>= 0xFF</initializer>
+          <briefdescription>
+<para>unknown/unsupported security in scan results </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum of encryption types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The security type specifies a particular security to use when connected to a WiFi network </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="271" column="32" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="271" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="scl__common_8h_1ade53c1ba949b59704f58c0c2d11d5421" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* scl_buffer_t</definition>
+        <argsstring></argsstring>
+        <name>scl_buffer_t</name>
+        <briefdescription>
+<para>Typedef for SCL buffer pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="179" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t scl_result_t</definition>
+        <argsstring></argsstring>
+        <name>scl_result_t</name>
+        <briefdescription>
+<para>Typedef for SCL result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" line="184" column="18" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines common data types used in SCL </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018-2020<sp/>Cypress<sp/>Semiconductor<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cy_result.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_SCL_COMMON_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_SCL_COMMON_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constants</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_LOG_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>false<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#define<sp/>SCL_LOG(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(SCL_LOG_ENABLE)<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>printf<sp/>x;<sp/>}<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#define<sp/>CHECK_BUFFER_NULL(buf)<sp/><sp/>if<sp/>(buf<sp/>==<sp/>NULL)\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>SCL_LOG((&quot;Buffer<sp/>pointer<sp/>is<sp/>null\n&quot;));<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>SCL_BADARG;<sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor">#define<sp/>MODULE_BASE_CODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x0080U)<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#define<sp/>SCL_RESULT_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>scl_result_t<sp/>Error<sp/>code<sp/>format</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>|31-18<sp/>(14<sp/>bit)<sp/>for<sp/>module<sp/>id|17-16<sp/>(2<sp/>bit)<sp/>for<sp/>result<sp/>type|15-0<sp/>for<sp/>SCL<sp/>Error<sp/>code|</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>for<sp/>example,<sp/>for<sp/>Error<sp/>code<sp/>1026,<sp/>the<sp/>result<sp/>of<sp/>SCL_RESULT_CREATE<sp/>is<sp/>33555458.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_RESULT_CREATE(x)<sp/>CY_RSLT_CREATE(SCL_RESULT_TYPE,<sp/>MODULE_BASE_CODE,<sp/>(x)<sp/>)<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor">#define<sp/>SCL_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor">#define<sp/>SCL_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(100)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor">#define<sp/>SCL_PENDING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor">#define<sp/>SCL_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(2)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor">#define<sp/>SCL_BADARG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(5)<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor">#define<sp/>SCL_UNFINISHED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(10)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor">#define<sp/>SCL_PARTIAL_RESULTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1003)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor">#define<sp/>SCL_INVALID_KEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1004)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor">#define<sp/>SCL_DOES_NOT_EXIST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1005)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor">#define<sp/>SCL_NOT_AUTHENTICATED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1006)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor">#define<sp/>SCL_NOT_KEYED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1007)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor">#define<sp/>SCL_IOCTL_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1008)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor">#define<sp/>SCL_BUFFER_UNAVAILABLE_TEMPORARY<sp/><sp/>SCL_RESULT_CREATE(1009)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor">#define<sp/>SCL_BUFFER_UNAVAILABLE_PERMANENT<sp/><sp/>SCL_RESULT_CREATE(1010)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor">#define<sp/>SCL_CONNECTION_LOST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1012)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor">#define<sp/>SCL_OUT_OF_EVENT_HANDLER_SPACE<sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1013)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor">#define<sp/>SCL_SEMAPHORE_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1014)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor">#define<sp/>SCL_FLOW_CONTROLLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1015)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor">#define<sp/>SCL_NO_CREDITS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1016)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor">#define<sp/>SCL_NO_PACKET_TO_SEND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1017)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor">#define<sp/>SCL_CORE_CLOCK_NOT_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1018)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor">#define<sp/>SCL_CORE_IN_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1019)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor">#define<sp/>SCL_UNSUPPORTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1020)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor">#define<sp/>SCL_BUS_WRITE_REGISTER_ERROR<sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1021)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor">#define<sp/>SCL_SDIO_BUS_UP_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1022)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor">#define<sp/>SCL_JOIN_IN_PROGRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1023)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor">#define<sp/>SCL_NETWORK_NOT_FOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1024)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor">#define<sp/>SCL_INVALID_JOIN_STATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1025)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor">#define<sp/>SCL_UNKNOWN_INTERFACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1026)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor">#define<sp/>SCL_SDIO_RX_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1027)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor">#define<sp/>SCL_HWTAG_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1028)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor">#define<sp/>SCL_RX_BUFFER_ALLOC_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1029)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor">#define<sp/>SCL_BUS_READ_REGISTER_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1030)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor">#define<sp/>SCL_THREAD_CREATE_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1031)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor">#define<sp/>SCL_QUEUE_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1032)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor">#define<sp/>SCL_BUFFER_POINTER_MOVE_ERROR<sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1033)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor">#define<sp/>SCL_BUFFER_SIZE_SET_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1034)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor">#define<sp/>SCL_THREAD_STACK_NULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1035)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor">#define<sp/>SCL_THREAD_DELETE_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1036)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor">#define<sp/>SCL_SLEEP_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1037)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor">#define<sp/>SCL_BUFFER_ALLOC_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1038)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor">#define<sp/>SCL_NO_PACKET_TO_RECEIVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1039)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor">#define<sp/>SCL_INTERFACE_NOT_UP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1040)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor">#define<sp/>SCL_DELAY_TOO_LONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1041)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor">#define<sp/>SCL_INVALID_DUTY_CYCLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1042)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor">#define<sp/>SCL_PMK_WRONG_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1043)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor">#define<sp/>SCL_UNKNOWN_SECURITY_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1044)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor">#define<sp/>SCL_WEP_NOT_ALLOWED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1045)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor">#define<sp/>SCL_WPA_KEYLEN_BAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1046)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor">#define<sp/>SCL_FILTER_NOT_FOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1047)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor">#define<sp/>SCL_SPI_ID_READ_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1048)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor">#define<sp/>SCL_SPI_SIZE_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1049)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor">#define<sp/>SCL_ADDRESS_ALREADY_REGISTERED<sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1050)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor">#define<sp/>SCL_SDIO_RETRIES_EXCEEDED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1051)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor">#define<sp/>SCL_NULL_PTR_ARG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1052)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor">#define<sp/>SCL_THREAD_FINISH_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1053)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor">#define<sp/>SCL_WAIT_ABORTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1054)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor">#define<sp/>SCL_SET_BLOCK_ACK_WINDOW_FAIL<sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1055)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor">#define<sp/>SCL_DELAY_TOO_SHORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1056)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor">#define<sp/>SCL_INVALID_INTERFACE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1057)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor">#define<sp/>SCL_WEP_KEYLEN_BAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1058)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor">#define<sp/>SCL_HANDLER_ALREADY_REGISTERED<sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1059)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor">#define<sp/>SCL_AP_ALREADY_UP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1060)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor">#define<sp/>SCL_EAPOL_KEY_PACKET_M1_TIMEOUT<sp/><sp/><sp/>SCL_RESULT_CREATE(1061)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor">#define<sp/>SCL_EAPOL_KEY_PACKET_M3_TIMEOUT<sp/><sp/><sp/>SCL_RESULT_CREATE(1062)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor">#define<sp/>SCL_EAPOL_KEY_PACKET_G1_TIMEOUT<sp/><sp/><sp/>SCL_RESULT_CREATE(1063)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor">#define<sp/>SCL_EAPOL_KEY_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1064)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor">#define<sp/>SCL_MALLOC_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1065)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor">#define<sp/>SCL_ACCESS_POINT_NOT_FOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1066)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor">#define<sp/>SCL_RTOS_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1067)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor">#define<sp/>SCL_CLM_BLOB_DLOAD_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1068)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor">#define<sp/>SCL_HAL_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1069)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor">#define<sp/>SCL_RTOS_STATIC_MEM_LIMIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCL_RESULT_CREATE(1070)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Application<sp/>uses<sp/>the<sp/>following<sp/>constants<sp/>to<sp/>allocate<sp/>the<sp/>buffer<sp/>pool:<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BDC_HEADER_WITH_PAD<sp/>6<sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor">#define<sp/>BDC_HEADER_OFFSET_TO_DATA<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCL_PAYLOAD_MTU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1500)<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor">#define<sp/>SDPCM_HEADER<sp/>(8<sp/>+<sp/>4)<sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor">#define<sp/>MAX_BUS_HEADER_SIZE<sp/>4<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor">#define<sp/>BUFFER_OVERHEAD<sp/>4<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor">#define<sp/>SCL_LINK_HEADER<sp/>(BDC_HEADER_WITH_PAD<sp/>+<sp/>BDC_HEADER_OFFSET_TO_DATA<sp/>+<sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDPCM_HEADER<sp/>+<sp/>MAX_BUS_HEADER_SIZE<sp/>+<sp/>BUFFER_OVERHEAD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor">#define<sp/>SCL_ETHERNET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor">#define<sp/>SCL_PHYSICAL_HEADER<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SCL_LINK_HEADER<sp/>+<sp/>SCL_ETHERNET_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor">#define<sp/>SCL_LINK_MTU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SCL_PAYLOAD_MTU<sp/>+<sp/>SCL_PHYSICAL_HEADER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type<sp/>Definitions</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">******************************************************/</highlight></codeline>
+<codeline lineno="178"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="scl__common_8h_1ade53c1ba949b59704f58c0c2d11d5421" kindref="member">scl_buffer_t</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="scl__common_8h_1aa58a3303ad0c17b7a2d32b4b3f390ec4" kindref="member">scl_result_t</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/******************************************************</highlight></codeline>
+<codeline lineno="186"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Structures<sp/>and<sp/>Enumerations</highlight></codeline>
+<codeline lineno="187"><highlight class="comment">******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812ae2b5f551535df41fa57331942b7050d0" kindref="member">SCL_FALSE</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812a25c4ff8d5a12ed99b5d6f0dc175ea47d" kindref="member">SCL_TRUE</ref><sp/><sp/>=<sp/>1<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1ad0c0e3eeace86bed54540fcfb97c8812" kindref="member">scl_bool_t</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a491a0d6079223bcc144618147f16b263a9a76612f324aa731465b8fcef1085533" kindref="member">SCL_INVALID_ROLE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a491a0d6079223bcc144618147f16b263a8f8f3eacf8c09454172a590657d78afc" kindref="member">SCL_STA_ROLE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a491a0d6079223bcc144618147f16b263a676bde82f54e54e5292eb421cb3e276d" kindref="member">SCL_AP_ROLE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a491a0d6079223bcc144618147f16b263a586d733a3fb6470ef16a56dd4942da40" kindref="member">SCL_P2P_ROLE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1a491a0d6079223bcc144618147f16b263" kindref="member">scl_interface_role_t</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a1ef23948fa9e7e7fac502b8eb189ea47" kindref="member">SCL_RX_DATA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8ad41fc8f197fa39f802e1626e8a9990e2" kindref="member">SCL_RX_TEST_MSG</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a814357835155c8c6edfb25056e992351" kindref="member">SCL_RX_GET_BUFFER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a284dec35e181230494fdbb3e8db87074" kindref="member">SCL_RX_GET_CONNECTION_STATUS</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8a63bfd294e077ab2ac1c9f67af47f0825" kindref="member">SCL_RX_SCAN_STATUS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8abd1b1ece53a2a2c6a85851ec16fd510b" kindref="member">SCL_RX_EVENT_CALLBACK</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1ad2284e2664d908a015ded6f3b6c9e6f8" kindref="member">scl_ipc_rx_t</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a58efee8e7e8769d8685fc1b6567ed911" kindref="member">SCL_TX_TEST_MSG</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a8578fe2e7e153cbb90238ddab4578472" kindref="member">SCL_TX_WIFI_INIT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46affbde7bce68d8585e5dc6f811e534aec" kindref="member">SCL_TX_CONFIG_PARAMETERS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46aa83a436dbdb4c3f2a0f30cb007db706a" kindref="member">SCL_TX_GET_MAC</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46af78db32b364393f00bdfa8532851ffd0" kindref="member">SCL_TX_REGISTER_MULTICAST_ADDRESS</ref><sp/><sp/>=<sp/>5,<sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46affc21552e23ab5fb0f3467063a01cc02" kindref="member">SCL_TX_SEND_OUT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,<sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a8b0a03e5769e80b5ac4bfece90968f7c" kindref="member">SCL_TX_TRANSCEIVE_READY</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,<sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab59880910176cc776f5b44520068bb9c" kindref="member">SCL_TX_WIFI_ON</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,<sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a88fe5a393e75e5c10f9f18eaeba1cd5a" kindref="member">SCL_TX_WIFI_SET_UP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,<sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46aeba990e60a370115fddfab01fb80efbc" kindref="member">SCL_TX_WIFI_NW_PARAM</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,<sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ac52dd1ad608863e2561bd91c2cc76dfc" kindref="member">SCL_TX_WIFI_GET_RSSI</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,<sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a9cb54f84da32c6a983adc1f96890ce4b" kindref="member">SCL_TX_WIFI_GET_BSSID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a234e28ed2e4ef5b47b7dec4315b87dc5" kindref="member">SCL_TX_CONNECT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,<sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a404a155243899240e4066042d05f40bb" kindref="member">SCL_TX_DISCONNECT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,<sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a1833ff3bb744ded966d7e303f661d584" kindref="member">SCL_TX_CONNECTION_STATUS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab469ff0c31036aedc93e0e19f3acc749" kindref="member">SCL_TX_SCL_VERSION_NUMBER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a819078a6ac44ea3c25516668db264967" kindref="member">SCL_TX_SCAN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,<sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a0649cf7412376be99526a5cb9aee8460" kindref="member">SCL_TX_GET_BSS_INFO</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,<sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a6352d889000eb6508f11d4bd7cf464d6" kindref="member">SCL_TX_SET_IOCTL_VALUE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>19,<sp/></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46a12f3edbd6559174029d270339a125c33" kindref="member">SCL_TX_WIFI_JOIN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>20,<sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46ab78424ac3b707a394fafb78b94356001" kindref="member">SCL_TX_SET_EVENT_HANDLER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>21<sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1af4838d96b6edc8577f92d03e9ae66d46" kindref="member">scl_ipc_tx_t</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="structscl__mac__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>octet[6];<sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}<sp/><ref refid="structscl__mac__t" kindref="compound">scl_mac_t</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>scl_nsapi_connection_status<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8afeea1368946d765d9881fdafb755a5e2" kindref="member">SCL_NSAPI_STATUS_LOCAL_UP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a7da44a711759e8ac993eee1fddf0314f" kindref="member">SCL_NSAPI_STATUS_GLOBAL_UP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a1a88a3920e882f424f2efc4c803ff009" kindref="member">SCL_NSAPI_STATUS_DISCONNECTED</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8a7cecd016ce40d4ee2687374bc168ed5e" kindref="member">SCL_NSAPI_STATUS_CONNECTING</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>SCL_NSAPI_STATUS_ERROR_UNSUPPORTED<sp/><sp/>=<sp/>9999</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1aafcfea88c2d16fddafb15745a6ecaba8" kindref="member">scl_nsapi_connection_status_t</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>scl_nsapi_security<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a9eac5dc17b5a2002167ec6d315f46bc8" kindref="member">SCL_NSAPI_SECURITY_NONE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a2dcd7dd88cc28fffb75f39d507dc7422" kindref="member">SCL_NSAPI_SECURITY_WEP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x1,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3aefe0793e05e344bd7a1800af56495b94" kindref="member">SCL_NSAPI_SECURITY_WPA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a3ce72390c748d46213d2f955c3d1d388" kindref="member">SCL_NSAPI_SECURITY_WPA2</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x3,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a5877b5e0ff37391a92c4db37eb00cbe3" kindref="member">SCL_NSAPI_SECURITY_WPA_WPA2</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x4,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a842bf987118141ea20f5250733bf1708" kindref="member">SCL_NSAPI_SECURITY_PAP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x5,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3acef574147829bf2567cec2f9f4564bf0" kindref="member">SCL_NSAPI_SECURITY_CHAP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x6,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a19bca4c0656a4b89382fc265218e6228" kindref="member">SCL_NSAPI_SECURITY_EAP_TLS</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x7,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3a6df810e80cece34d26b8b2d717420dc1" kindref="member">SCL_NSAPI_SECURITY_PEAP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x8,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3ab35cac5ce315530ba060c28b2fb7e44b" kindref="member">SCL_NSAPI_SECURITY_WPA2_ENT</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x9,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3aca972659886e5b8a901041f5154fcc93" kindref="member">SCL_NSAPI_SECURITY_UNKNOWN</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xFF,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}<sp/><ref refid="scl__common_8h_1a14cb286a8d0d1925109eca3afce127b3" kindref="member">scl_nsapi_security_t</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>extern<sp/>&quot;C&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ifndef<sp/>INCLUDED_SCL_COMMON_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_common.h"/>
+  </compounddef>
+</doxygen>

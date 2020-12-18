@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Overview</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The SCL is developed to act as an interface layer between the network stack and Network Processor. It provides APIs to interact with the Network Processor. General network related operations like connecting to a network, transmitting packets and receiving packets can be performed using SCL APIs. The SCL uses Inter-Processor Communication (IPC) for communicating with the Network Processor.</para>
+<sect1 id="index_1section_features">
+<title>Features and Functionality</title>
+<para>The current implementation has the following features and functionality:<itemizedlist>
+<listitem><para>Relays data to and from the Network Processor</para>
+</listitem><listitem><para>Buffer allocation for communicating with the Network Processor</para>
+</listitem><listitem><para>Wi-Fi station (STA) mode of operation</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1section_folder_structure">
+<title>Folder Structure</title>
+<para><itemizedlist>
+<listitem><para>/inc/scl_common.h - contains common data types and error codes used in the SCL</para>
+</listitem><listitem><para>/inc/scl_ipc.h - contains APIs used by the SCL to interact with the Network Processor</para>
+</listitem><listitem><para>/inc/scl_types.h - contains definitions for Wi-Fi security modes</para>
+</listitem><listitem><para>/inc/scl_wifi_api.h - contains APIs to directly interact with the Network Processor without using any mbed-os class objects</para>
+</listitem><listitem><para>/src/include/scl_buffer_api.h - contains APIs to allocate and de-allocate memory</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1section_scl_architecture">
+<title>SCL Architecture</title>
+<para><image type="html" name="SCL_architecture.JPG"></image>
+</para>
+</sect1>
+<sect1 id="index_1section_supported_platforms">
+<title>Supported Platforms</title>
+<para>This library and its features are supported on the following Cypress platforms:<itemizedlist>
+<listitem><para>CYSBSYSKIT-01 Rapid IoT Connect Platform RP01 Feather Kit</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1section_dependencies">
+<title>Dependent Libraries</title>
+<para><itemizedlist>
+<listitem><para>Abstraction-rtos (<ulink url="https://github.com/cypresssemiconductorco/abstraction-rtos/#latest-v1.X">https://github.com/cypresssemiconductorco/abstraction-rtos/#latest-v1.X</ulink>)</para>
+</listitem><listitem><para>Clib-support (<ulink url="https://github.com/cypresssemiconductorco/clib-support/#latest-v1.X">https://github.com/cypresssemiconductorco/clib-support/#latest-v1.X</ulink>)</para>
+</listitem><listitem><para>FreeRTOS (<ulink url="https://github.com/cypresssemiconductorco/freertos/#latest-v10.X">https://github.com/cypresssemiconductorco/freertos/#latest-v10.X</ulink>)</para>
+</listitem><listitem><para>lwip (<ulink url="https://git.savannah.nongnu.org/git/lwip/#STABLE-2_1_2_RELEASE">https://git.savannah.nongnu.org/git/lwip/#STABLE-2_1_2_RELEASE</ulink>)</para>
+</listitem><listitem><para>wifi-mw-core (<ulink url="https://github.com/cypresssemiconductorco/wifi-mw-core/#latest-v2.X">https://github.com/cypresssemiconductorco/wifi-mw-core/#latest-v2.X</ulink>)</para>
+</listitem><listitem><para>retarget-io (<ulink url="https://github.com/cypresssemiconductorco/retarget-io/#latest-v1.X">https://github.com/cypresssemiconductorco/retarget-io/#latest-v1.X</ulink>)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1section_integration">
+<title>Quick Start</title>
+<para><itemizedlist>
+<listitem><para>When using SCL library without scl-mtb-integration library, developer must initialize the SCL before starting any network activity. <programlisting><codeline><highlight class="normal">#include<sp/>&quot;scl_ipc.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>main(void)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>scl_init();<sp/>//must<sp/>be<sp/>included<sp/>while<sp/>using<sp/>SCL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*Insert<sp/>your<sp/>application<sp/>here*/<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

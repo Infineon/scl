@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.16">
+  <compounddef id="structscl__tx__buf__t" kind="struct" language="C++" prot="public">
+    <compoundname>scl_tx_buf_t</compoundname>
+    <includes local="no">scl_wifi_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structscl__tx__buf__t_1a6164f96b054c947752bce394af84b548" prot="public" static="no" mutable="no">
+        <type><ref refid="scl__common_8h_1ade53c1ba949b59704f58c0c2d11d5421" kindref="member">scl_buffer_t</ref></type>
+        <definition>scl_buffer_t buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+<para>pointer to the buffer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" line="42" column="18" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structscl__tx__buf__t_1ab2c6b258f02add8fdf4cfc7c371dd772" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>size of the buffer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" line="43" column="14" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SCL transmit buffer structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" line="41" column="25" bodyfile="C:/sprint/scl_scl_mtb_integration_review/scl_doxygen_documentation/inc/scl_wifi_api.h" bodystart="41" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structscl__tx__buf__t_1a6164f96b054c947752bce394af84b548" prot="public" virt="non-virtual"><scope>scl_tx_buf_t</scope><name>buffer</name></member>
+      <member refid="structscl__tx__buf__t_1ab2c6b258f02add8fdf4cfc7c371dd772" prot="public" virt="non-virtual"><scope>scl_tx_buf_t</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
