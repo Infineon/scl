@@ -247,6 +247,22 @@
 
 #define LWIP_RAND               rand
 
+/**
+ * Allowed DNS Ports for CYSBSYSKIT-01
+ */
+#define DNS_PORT_ALLOWED(port)            ((port) >= 0xe000)
+
+/**
+ * Allowed UDP and TCP Ports for CYSBSYSKIT-01
+ */
+#define UDP_LOCAL_PORT_RANGE_START        (0xe000)
+#define UDP_LOCAL_PORT_RANGE_END          (0xffff)
+#define UDP_ENSURE_LOCAL_PORT_RANGE(port) ((u16_t)(((port) & (u16_t)~UDP_LOCAL_PORT_RANGE_START) + UDP_LOCAL_PORT_RANGE_START))
+
+#define TCP_LOCAL_PORT_RANGE_START        (0xe000)
+#define TCP_LOCAL_PORT_RANGE_END          (0xffff)
+#define TCP_ENSURE_LOCAL_PORT_RANGE(port) ((u16_t)(((port) & (u16_t)~TCP_LOCAL_PORT_RANGE_START) + TCP_LOCAL_PORT_RANGE_START))
+
 #define LWIP_FREERTOS_CHECK_CORE_LOCKING             (1)
 
 #define LWIP_ASSERT_CORE_LOCKED()       sys_check_core_locking()

@@ -1,7 +1,0 @@
-../../../whd-bsp-integration
-../../../wifi-host-driver
-../../../wifi-mw-core/configs
-
-$(SEARCH_whd-bsp-integration)
-$(SEARCH_wifi-host-driver)
-$(SEARCH_wifi-mw-core)/configs
