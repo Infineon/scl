@@ -4,8 +4,16 @@
 See the [README.md](./README.md) for a brief description on the SCL.
 
 ## Changelog
+### v1.0.2
+* Updated the mbedtls configuration.
+
+### v1.0.1
+* Updated folder structure
+
+* Added LWIP, FreeRTOS and mbedtls configurations
+
 ### v1.0.0
-* Initial release for scl shim layer.
+* Initial release for scl.
 
 * Includes support for Wi-Fi STA Mode.
 

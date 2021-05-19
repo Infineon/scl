@@ -323,10 +323,10 @@ static void scl_rx_handler(void)
     while (SCL_TRUE) {
         cy_rtos_get_semaphore(&g_scl_thread_info.scl_rx_ready, CY_RTOS_NEVER_TIMEOUT, SCL_FALSE);
         index = (uint32_t)REG_IPC_STRUCT_DATA0(scl_receive);
-        SCL_LOG(("scl_rx_handler index = %lu\r\n", index));
+        SCL_LOG(("scl_rx_handler index = %d\r\n", index));
         switch (index) {
             case SCL_RX_DATA: {
-                SCL_LOG(("on CP the rxd address = %lx\r\n", REG_IPC_STRUCT_DATA1(scl_receive)));
+                SCL_LOG(("on CP the rxd address = %d\r\n", REG_IPC_STRUCT_DATA1(scl_receive)));
                 rx_cp_buffer = (int *) REG_IPC_STRUCT_DATA1(scl_receive);
                 SCL_LOG(("rx_cp_buffer = %p \r\n", rx_cp_buffer));
                 REG_IPC_STRUCT_RELEASE(scl_receive) = SCL_RELEASE;
