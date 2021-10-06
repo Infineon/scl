@@ -240,7 +240,9 @@ typedef enum {
     SCL_TX_GET_BSS_INFO                = 18, /**< WLC BSS Info */
     SCL_TX_SET_IOCTL_VALUE             = 19, /**< Set WHD IOCTL Value */
     SCL_TX_WIFI_JOIN                   = 20, /**< Join the Wi-Fi network */
-    SCL_TX_SET_EVENT_HANDLER           = 21  /**< Set the event handler */
+    SCL_TX_SET_EVENT_HANDLER           = 21, /**< Set the event handler */
+    SCL_TX_DHM_CP_REGISTER             = 50, /**< Register a thread with DHM on NP */
+    SCL_TX_DHM_CP_HEART_BEAT           = 51  /**< Send heartbeat messages to DHM on NP */
 } scl_ipc_tx_t;
 
 

@@ -59,7 +59,7 @@ extern "C"
 /**
  * Default interval (in micro seconds) for polling the Network Processor
  */
-#define NW_DELAY_TIME_US                       (3000000)
+#define NW_DELAY_TIME_US                       (1000000)
 /**
  * Default parameter length
  */

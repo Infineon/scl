@@ -4,6 +4,13 @@
 See the [README.md](./README.md) for a brief description on the SCL.
 
 ## Changelog
+### v1.1.0
+* Added the deepsleep related APIs
+
+* Modified the IPC wait method to use semaphores
+
+* Protected the IPC Register access with Mutex
+
 ### v1.0.2
 * Updated the mbedtls configuration.
 
