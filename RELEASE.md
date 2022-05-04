@@ -4,6 +4,9 @@
 See the [README.md](./README.md) for a brief description on the SCL.
 
 ## Changelog
+### v1.1.1
+* Minor change to increase throughput
+
 ### v1.1.0
 * Added the deepsleep related APIs
 

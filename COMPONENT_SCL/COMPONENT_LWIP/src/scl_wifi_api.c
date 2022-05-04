@@ -414,7 +414,7 @@ void scl_process_events_from_np(const scl_event_header_t *event_header,
         {
             for (j = 0; scl_event_list[i].events[j] != SCL_WLC_E_NONE; ++j)
             {
-                if ( (scl_event_list[i].events[j] == event_header->event_type) )
+                if (scl_event_list[i].events[j] == event_header->event_type)
                 {
                     /* Correct event type has been found - call the handler function and exit loop */
                     scl_event_list[i].handler_user_data =
